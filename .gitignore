@@ -16,3 +16,6 @@ CLAUDE.md
 .workspace/
 .venv-mlfinpy/
 .idea/
+
+# macOS
+.DS_Store
