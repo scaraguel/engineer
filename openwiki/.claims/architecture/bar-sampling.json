@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f18d3edc9378f5f660f14b6ada975c627cd34390839685df612d6ffff53fbe6c",
+  "claims": [
+    {
+      "id": "claim_feccd673311d4343a6dcef219b20d16d",
+      "statement": "The public bars package exposes vectorized tick, volume, dollar, and volume-imbalance samplers under the default names, preserves loop-based versions under `Original` suffixes, and exports fixed, window-based, and run variants directly.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/__init__.py#L20-L88",
+          "version": "repo-lines-v1:sha256:195e109b3c385549e057e90bc8c47c572e558a381f3a8d00d4bd9a519aa70909:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBkNDJmMTNlMzc0OWMwYjExZjYxZTc4YjkyMDE5YWZhMWM1OGEzNDg5MDQ1MjYyMWE5MDBmNDA4ODMzM2ExMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6e46093a1dee45c887f3f1f8d64fdfa1",
+      "statement": "All bar samplers share validation that requires a Polars DataFrame with non-null sorted Datetime timestamps, finite positive numeric prices, and finite nonnegative numeric volumes; a supplied side column must contain only non-null numeric -1 or +1 values.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/base.py#L35-L100",
+          "version": "repo-lines-v1:sha256:ac78ef418f7a0adfa134652f464fd1c453ae71dc6248f29b252b54af3c9114e2:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyOTI0ZjE4ODhhMzBkY2U5Njc1OGM4MjJhODRmMmY1Nzc3ODA1MzQ1NDFlODY4ZmM3MGU1ODI5YTJiYzFkNTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUwNmVhMjliMDM3OTdhOGYwZmUwMjFhMGQxZjUwMGYwYTNkYzI1OTYyYTRmZDEyMjE2Y2E3MTNkMjRmNmMwZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3NDljMTViMmNjZjc1OWI1MjUwZjJhZTY3NzExMDQzN2FjYzY0ZmY1N2I5NjUyZjA0MWY3MWVmYjg5YTYxM2QifQ"
+        },
+        {
+          "resource": "repo://tests/bars/test_input_contract.py#L100-L230",
+          "version": "repo-lines-v1:sha256:28f74d4fd7b5b130088a000ef754d312ba10ab20e12b08dc36b59e7e06b79b02:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3M2E0YzEzYWU3OGNkYWRjYzNmNWRiNDgyN2ZmNDIwYzIzY2RjMDlhZTBhOGFiZmI4YTg5OGU3NWJiMzExOWJhIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhNGY0N2YxYzFmOTcwMDZmMTBhMDk1MTM4N2IwNThkMjRlZTE1MTAxYTAxZjlkZmJiMTMwMzQzMzEzMDlkNmE1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_2fc9c1cf1b714727b846b84331f6ab6b",
+      "statement": "The common OHLCV construction uses the first trade timestamp, first and last prices for open and close, extrema for high and low, summed volume, and row count; sampler-specific typed empty frames preserve a concrete schema when no bar is emitted.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/base.py#L102-L150",
+          "version": "repo-lines-v1:sha256:968a171d0cd82449a134dfc511bd3faa4d8a7c19e778bfca5d1395ff9a23c1d0:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1MTBkZjAzOWIyNGFhMjQwMWQ4Y2M2N2Q1NDQyNDY1Njg2NTYyNjIwNWYxZjdkNTQ1NTM4ODc0YzRhM2Y3NTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MjNiYjY0MTBhMTU2ZjdiYWQ1MGY4NjE3NDkxYzM2ZjIwMWQ3NjJjMTQ2MWE2N2VlYmZkMjczZTAxZmNmZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUzNTQ1NDMwZDFkMzI1MWIyZTA1NGI0Y2RhOTU4YmY2MmQ3OGQ2ZjJhNDZkYjNhNWE0NzAxMGJkNjA5Y2M0YmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQzNjY4OTQ5Y2U4ZDEzZjBlZmQ1ZDA4YzhlNjQ5MzA5MDA2ODUyZjJhNDViMDM4MGE3YThkMzJmNjM1ZDc4OTEifQ"
+        },
+        {
+          "resource": "repo://tests/bars/test_input_contract.py#L157-L176",
+          "version": "repo-lines-v1:sha256:5a55e2d72d80d35744e23275be2aa46b99b0e79b25bf5e647388e248ccb3dcd4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEyNDY5ODM5NWQ0OWRmMmVmYTk0YjFlMzcyNDBhYWZjZWMwOWQ0Y2MxNGUzZmQ3Y2M2ZmE5NzQ4OWQ5YmFkYTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3MDUwM2YxMDUzYWU0YzcxZjk0NTI2YjE0NTI1MmQzMTMxZmMxZDE5YzY2YmVhMmIxZDkzNTA1YjVmM2EyOTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmN2MwMTczNTJmNmEzNGE5ZDUwNjJjOWE2NzBjYjk2YjJhM2M4M2EyYzRlMTViNDc1MjU4YjJhM2NjZGZlNjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc3OTBlZTRjYzgxNTRjOTY1NDU2MGY0ZWY2MDY3YTgyM2FhYTVkYTYyODUzOTY1ZGNhMGUwZTg5NTNhNjgyNGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8e6c1ed6c2d4441aa521db4cdec65b3",
+      "statement": "Incomplete suffixes are excluded by default and can be emitted as one final bar with `include_incomplete=True`; fixed-threshold volume and dollar accumulation resets to zero at a crossed boundary rather than splitting the crossing trade or carrying its excess.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/volume.py#L198-L272",
+          "version": "repo-lines-v1:sha256:ad95c51c9893e192f917f5218f19006d309fcd64cbb283c4986d96f834c7da89:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5MDNmMGM4ODFmOTVkN2MxMDM5ZThjYzFmZTk0ZjFkNzZiNGZmNGEwODhlNDE1MzZiZDEyYzc3ODU3NGQ1YTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1OTYyY2I1OTIyYWZmMTM5NzVlZWFmZGUyZTgzODU1NDU4ZThhMjRhNGY1NTMwMmJiNjBlZmMxYWE0OTY5NWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJkZTM3YWQ0NTBkMDI3NmVlMmQ1YmY3YjdjMDk4MDVjYTgzYjRmMGUyMGY2NzVjM2ViNTBlZDYyNzFmZDcwYTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZkY2E4YTg0YzM3YWY4NDJjZmQzNDA0ZDNhZWFlNDM5ZTc4NGY5YTQwOTEzNTI1MzAwYzBjNWUzZWFhNGFiOTcifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/volume.py#L69-L128",
+          "version": "repo-lines-v1:sha256:24aaef304cf14c71b7dfc7b95224768d6b5db8bba2b3357ea3f2f71ef7f79502:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkYzgzZDYyMmE5YjlmYjU0MGRkYjEyYjg5NzdlOWQ0ZDdjMDczZmE4YmU3MTg0ZWMzNjAwMTc2ZjQ0NjBlYjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwN2M0YTdmNjM5YWRjZDAzMDgyZDgxN2FhZDc1OGExZjM1NDdjZGU0MTc0ZDI5OGQ2MDZlMjcyZmI1OTRhMjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlN2IxOGNkYWYxMDMwOWMwMjczN2ZiYzFiYzU5NDI4N2JlY2NhODU3OWI4ZWIxMDk3MTEzNGVlNTgxNmNjMTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1Mzg2YmY5MjkwMzA3MjA4OTIwYWRlZWQ2NTE2MzQyNWYzMzM3NjY2NjQ5OWM1Y2UwYTE4YmExZjVmYjUyZTcifQ"
+        },
+        {
+          "resource": "repo://tests/bars/test_imbalance_variants.py#L195-L249",
+          "version": "repo-lines-v1:sha256:dcef6dd6fc2cab87b50d957bd83db04761188d7a90824415fb8fb66d2f48f8fe:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4ZTZmNTliZjY0NmEzZDdhNWQ1NjM3ZjlkODQyZmZlODg2YWZhMjk2Y2M2ZTRlZjI3ZGE2OTg4MzQ3ZjY4NTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwYWEyYzdiZTFlYzM5N2M1OWZlMTI1Mzc4ODJkZmY1N2ExNDRlNDllZmQwZmM0MWJlNDNjZmJjNjBmYWNiYmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk0OTU4NmY1NzRkNjU5MzliMzU1ZjZiZDA4MjJlOTg0MmViODlhMWQ1YzE0NzgxYTI3OWVlNjZkMDlmNDczYmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7689b0d1b64d4f2a9db520e03c000b2c",
+      "statement": "Trade-side classification is not performed by side-dependent bar samplers: they require a `side` column and reject its absence. The separate `effective_tick_rule` maps price changes to signs but returns zero where direction is unresolved, which is incompatible with the bar-side contract until resolved or filtered.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/base.py#L91-L100",
+          "version": "repo-lines-v1:sha256:88a0afa28a5781827493a54e4836c9bbb05a6bd42671283991f5656acd0fa58f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlOTA1NWYzOGI5MzgzZDAzOTNkOGIzMzJkMDExMzdiY2ExOWEwMDEwMmFkZjI1ZjMwMDlkMjU3MTM2Y2YzOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3NDljMTViMmNjZjc1OWI1MjUwZjJhZTY3NzExMDQzN2FjYzY0ZmY1N2I5NjUyZjA0MWY3MWVmYjg5YTYxM2QifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L371-L381",
+          "version": "repo-lines-v1:sha256:202bef9d4ddfa6f53faed9d3d5d5bb40fc8092b7da9532b406567bb3f716a485:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjZGE3NDFjMDVmNjNjYzIwYmMxYmFkODJjYjc5ZWNlMDFjNDFjZmE4MmEyZjU4NDQxZWIzODgzNDg1YjkyMjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczYTNhN2I1ODA1YTI3ZGU1YWZjNmYzMDU5ODNkYWJiNThiYjgxZGVkYTViODhhYWYzZTg2OTUyNjAwM2ZmZmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVjMjNiZDFkNGZkZTE4ZWI0MmJhNDE4MGU4ZWViZjdmYzE0MzczYTUyNzNmMTE2NjI3ZDY5MTMyMzM2ZmQxZTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlkNjhiNTFiNDM3NjhmY2Q4ZGQ4MDljNmI3MmJkYTI0N2UyYzQ1ZjRhYTBjZjEzMzA0OGY1ZTBlYmVhZGU3ODIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/run.py#L242-L257",
+          "version": "repo-lines-v1:sha256:810285e1884742ccbe60f5b4d4b36884e16eed1e8ca88f0b51997b15374d3954:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiZjM1NjYzZGY4YTE4ZjA5NTQ0M2YyZTU0ZTJlZmViNjAxNDk1MDM0OTcyYzJiMWViZTFiMmIyM2FlMjA1NzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgxNTQzMGRhN2EzYjdiMmYzMDhiNTYwNDc0MGFhODdlMjRiYjA1ZTE1M2Q1NDhjOGYyMmJmYzRlMWFiNDZiYmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNmN2VjMTNkNTFmNWYwMzg3ZWZhYzQ0ODBiNjAyMmM5NmQ5ZWI0NTVhOWE1MzgzOTg2MjUyN2UwZjBlYjk0YjQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/volume.py#L50-L57",
+          "version": "repo-lines-v1:sha256:3bf934cf602e2012501eec34c5dec3257b2034c7da40d81c6a96875e9ae07b28:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTNjMGQyNDFmYTNiMTk5YmQ4MmNmMThiZmM3ODEzMDZmOWFkNWNjNGUxZjI4ZGI1MTk3M2QwYTMwYWFjODc5ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTYxNTM3ZWMyNjgzOTlmNzE0NmYyMmE1ZjVkMjBiNDRlNGJlODFhMGZhM2FkYWYzZGZjM2U4NTM1ZGExNGQzMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWJmYWZmZmNhNDQwOGYxMWY1ZDgzZmQ3MDhhZGUxN2Y0NzI1MzdiNjhmN2YyYjBmZWRhOWY1YjdmY2IzMGIyOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTVhNzFhMTY0MGViNjI3ZTNiYTU3M2UxYzFkOTJhYzBjOGYxNzRlOWY5NWFiYTBkZjNiMmRjYTIzMjA1YmFjZiJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/features/microstructure/effective_tick_rule.py#L9-L40",
+          "version": "repo-lines-v1:sha256:4996ff3af445980687838345a31d1df8177a0b8c261f4402d178087f25f67e03:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhNDAzOGUxMzdjNzFiZjZhZDliOWQzMzZhMmQ5OTYyMDg0NWY4ZTc5NjBlZGMyNGQxZDlmYmJlZjRjYmY1OWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0YTgyOGY4ZDUxMjYzM2U2OGRjNDFlMjFjNjEzZWFlZDExMGE3Y2VlM2I0ZWY5NWJiNGU2NzkxZGM1YjhmMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjViZmVhYTA2OGViZjFjYWU0MDVlNzIxNDY3MTYwZjA5NTYwMWRlMTg2ZmZkMjlkZWM0NTMyM2UyMjUxMzYyNTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_06808db50277438eb04b5931dabee5eb",
+      "statement": "Tick, volume, and dollar bars are fixed-activity samplers: they emit after a configured trade count, cumulative traded volume, or cumulative price-times-volume respectively, rather than on clock-time intervals; the default accelerated implementations identify ordered groups and aggregate them with Polars.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L110-L187",
+          "version": "repo-lines-v1:sha256:9ad8fab6f35c644b242d68a32760d45779647e4a3dfeb549196ba35f2ecf2c49:eyJzZWxlY3RlZExpbmVDb3VudCI6NzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdkNjgyOGRmOTc0N2FmMGFiNDk1Mjg0ODM4MWY4ZTkyNWZkNTYwZDRkMDQyMTg3OWQzOWYzYzUzNmY0N2I2ZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyNzdhZmVmZTFkZWE2NjA3ZWNiOGUzMzk4YzNlNmM1MzQzMDQ1YzJhM2EzMTI4ODljOGMzM2NhOTJkOWViYzEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L203-L274",
+          "version": "repo-lines-v1:sha256:1651968fedfa9979f0cc7851d6363cf403d519496086d2ea83f2a67cb86db2dd:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3ZjIzNDI0N2I3OThhOTE3ZjI4MmM5YWU4NjU2MWYxMTAwYmJhYWNhYWQ5MzdjOWYyY2VmOGUwNzdlYzA3NzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ4ZTY1ZWVjOWQ1Yzg4ZjYxOWY1ZjVmM2E4MDc5NDI5NWNiYzliNzVjNWQ5ZWM1YmY0NWVkNjIxNDE4NGJmYTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNiNmRkNzg1NmU3NjM3MWVlYTExMTFmY2VhYmUyMzQ1ODljODA1YzYxMTc1YTM5MGY0OWY3ZjA0M2M4MDZmMTQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L290-L353",
+          "version": "repo-lines-v1:sha256:5e438f91df6eb5091a8ca15e48b4064dd6886c0f7beb04b94f1a1bb84dfb89a9:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3ZjIzNDI0N2I3OThhOTE3ZjI4MmM5YWU4NjU2MWYxMTAwYmJhYWNhYWQ5MzdjOWYyY2VmOGUwNzdlYzA3NzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJiODk3MWNjMjhiZTBmNTlkM2FlOWJkNDFjYTU1MWJjMjYyNzZhODRkZDE1MGIxM2YwZDcyOWVlN2E0YTRjYzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk0NWU5NDI3ZjEyM2E2MzkzZTgxNmNhNTY0YjI0MmM2OTNiYzAxZWEyZTczYWQwOTM2MWI3NTlkNmQ4ODY2MzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVlOGQyYjJiZmQxNThkMjhiNTY1MjMxYmMxNThmYzQ1ZGQwNTI2ZWIxZWNjNzBiMzZjNDQwZmEyZjA0ZGIxYTYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L35-L107",
+          "version": "repo-lines-v1:sha256:819cbb065cc6d0db28a95201129fec1d59fa89ddcecf9fdb0c8059863be749de:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3YmM1Y2E5MmFhMDI4NTBiNTU5ZTJkZDFkZTkwZGNjOWZjMTU2M2UxN2FkNTZlMTJmMzk2MGM4N2QyNDg3MDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhOGZiNzg2YmM4ODQ0NmFkNjllNzNkOTVlYjZkNDVhODUxOWJhYmM5ZjJlN2YwOTcyNzAwNDgyZjQwMDc1ZGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3NDdmYTg0YTBkZGRiYzU3MTc5YTA1NzU4ZjM1YjA5ZjBiNTIyNTU3YjNiZGNkMTA1YjVlOGYwNWJmMzE1ZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRmYjc1ZjI4NTkxNDYyYTA0ZjgzNmY4MzJmZDNhMzE1ZGNkNjg4N2EwZGU3Y2JlNjFhNjQ1MWI4NDYwNmVlOGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_71711c0eaefd4a6296fa67dae3eea70d",
+      "statement": "Fixed tick and volume imbalance samplers accumulate signed ticks or signed volume and emit when its absolute magnitude reaches a constant threshold, resetting the accumulator only at each bar boundary.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L1032-L1203",
+          "version": "repo-lines-v1:sha256:259bed55e0eb4c0308d95ec00b2da4d41fc4f42d0a1ff176142f3c2700a37ed6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzMmIyZDVjZGMwNjdlZTc1ZDIzOTkxM2U2MTcxNjY2NDBmNzQwMGRhYTVhNDBkNWFkYjlmMTY5MDM3MDE1YTVlIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJiYjEzZGE4MWEzOWFlZjZhN2E3ZDZlMzQ3YjA0YmIzOTZjOGUzZjE4ZTViOTllNTExMDBhMDJkNmU3MmM2YzU3IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJiM2RmMmFjZjA2ZThjM2YwM2M3MTM1YzZlOGFjNWE5Y2E1NDMyYWJlMDZhNzRhY2EwZmRkOWE1M2EwMDhmOTg3IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlNTZmNmEyNjdkYTYyMjIwNzY3NTM2NDMzOTA5YzQ4MmZkYmE5MTZkNzVlMzcyNjc4YWUzY2JlNDExYTJhMTdjIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L802-L859",
+          "version": "repo-lines-v1:sha256:ed4821acaede0584f2b5943e24c34dcd1f55350654b3a22b55b7a75c248ed2fb:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyNDRkNmQ2YWQ4NDdlNzFhMmNlNTM5Y2E1NDQxZjFkOWYyYzUxZDlkMjg4ZjBjY2YxYTZjNzBjMDUyNTEyODAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwMmI4ODBhYmJmMmU3MDc5MGU0NjdhYTQyNjIwMWQ2M2RkMWRlNDA4MTk0NGVlOWYxZmJjNzk5YmM3MmU2MDAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L862-L1030",
+          "version": "repo-lines-v1:sha256:79fbd3460f5ead6376e2a343c40eae6d436d0fd9be1c5def74ac76202784723f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTY5LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyYzg5NGNiZjI2YjU2Mjk1NTJhZDlkMDU4MzE4OTdjZDQ2N2Q5YmZmZmNjZmZiYzUxNGM1ZGJjMDcyNjIyODc4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4Y2M0YTdkMWNjNzk2YWJhM2U0NjcyMzMyN2Y1MTdlOWY4MTE5ODJkMjUwZjA3MDI5ODZlNGI1NzY0YWQ5NTg5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIyY2JmNWYyYjU2YzBhNzQxMDhkMjNlZjI2NTEzN2JhNzFkYWIwYjM1MzY5YjBiMmJkMTYwNjI3NTFhMWU0NGQxIn0"
+        },
+        {
+          "resource": "repo://tests/bars/test_imbalance_variants.py#L126-L139",
+          "version": "repo-lines-v1:sha256:5e3e14630aa1e3729a406463abd76a48f2a1134b29c4ccc426549f7cdb5ee22a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4NGUxZjFiY2M4MGRkMjRkMzU3MzliYjNiYTBiOTEzMWI5NjkwOGFjZTRjYWNjY2M1OTQxYjk2ZjRlZjY4ZjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc3Yzc4ZWIyNTNmMzM1NjkzMzc3NjZmYmNhMmU4ZjYyMjIwMTE2NjRjNWFlN2U2ZTk0NmFkZjkzMTFiYWEzMjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_99f92830de1a4bf282b6ef472479b74b",
+      "statement": "Window-based imbalance samplers wait for a full tick window, estimate expected bar length from a bounded window of recent completed bars, derive tick buy probability or mean signed volume from recent ticks, and emit only when the resulting expected imbalance is positive and reached.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L1206-L1297",
+          "version": "repo-lines-v1:sha256:4e6233c5cb3c4f8c5d4591a48f7b041ff256381e03e901a50d6b891badc0bdd6:eyJzZWxlY3RlZExpbmVDb3VudCI6OTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ1M2VjMzQ2OWNkYjQ1NDVmNzJmNjcyODMzZTk5MzcwZDUxOGVlOGQ5NDdkMWY2Mjg4NDIyYzI4OTlhODVjY2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzOWM2NTYwYWI1NmM4OWM0ODA4MTgxYTg2Zjc0YTJjYTZkYjhkYTEyZDBiY2Q5ZmJmYmE2ZjE5MDIzMDFkMmUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L1487-L1589",
+          "version": "repo-lines-v1:sha256:121afba0e579023c67a6aeff6b94aceeaea48c89068ee9012a39c59dd6aef682:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI5Njc1MmZhN2ZhZGMwODA2MTQwNTllZDkyZTc5OGVmMTA1OWNjZjRkMDg0NTM4NmNmMjM0ODk0MGE3NjlhZDQ1IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwOTg3MWViODQyYzQ3MzZiNWNiOTY1ZjY2OGUyMmQ1OGJkZGU0YTgzNTQ3MGJmMDhjMmZkNmNlMDQ1YjQ4ZDI3IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJjMjc1ZWVjYzBmYmJkNjA5MDA3YWYzYmIzMjVmMmYxOTZhNGZmZDIyZTZmZDAxOGM1NTFjMDU2NjNmODhjMTM5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4Y2M0YTdkMWNjNzk2YWJhM2U0NjcyMzMyN2Y1MTdlOWY4MTE5ODJkMjUwZjA3MDI5ODZlNGI1NzY0YWQ5NTg5In0"
+        },
+        {
+          "resource": "repo://tests/bars/test_imbalance_variants.py#L142-L174",
+          "version": "repo-lines-v1:sha256:9c3779adf34fd5974525d802e359e87c53c7671fea51dbd9db3b84f91e57a920:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwNDcyM2Q2MTA0YzYyMmNlMDFkNTUyNDNhNDIyNjA0OTkyZmM0YTVmODdhNGZjZDMyMTUxMzE2MjNhNTgxZGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4ZDM3ZTZkYThhYTAyMTZjZGRmYzFkNDFjY2ZmMWJiYmM3MzhhMGVhNGFmNzIwMDFhNGY0ZmFhNzkxOGUwOWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3MWVlOWRiNzI1MDRhOTBlNTJjNDhhYjljZmY4NjA5MDlkMjQ1ZjY4MzIyNzcxMTc0NDhjNmE0ZmFjOWU1NWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU4NjY3MDlkYjZjM2IwMGI2YWIyYzFjYWQzMDk4M2EwMTI4M2VmNjdkZTg1NDAxZTdjZGIzOTg4NmQ2MWJiZDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d5ecb26e68a94638978948959afd8ada",
+      "statement": "EWMA-adaptive tick imbalance bars use `E[T] * |2P(buy)-1|`, while adaptive volume imbalance bars use `E[T] * |2v_plus-E[v]|`; after the configured number of completed warm-up bars they update their expectations with `alpha` and expose the formation-time estimates as diagnostics.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L161-L280",
+          "version": "repo-lines-v1:sha256:74062f1af92af4f25dd228be3b828e7c4ac800d706193ce19b8f58ad82731f8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJjOWY0OGMwODYzNWQzNTJhYTRmOTcwNmJjOTMyM2NjNmViYjc0OTgwZjgxYTUxYjJkNmNiNTJhMTVkMmJkOTYwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzMGMxZjE4OGYxNDJlZDdhODI0NjgwYjIwNzE3MmM1NTE5YmM2MTRhNDhmZGE3Y2YxNjdlZGI4ZGRmNzk5NTZjIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4ZGFiNmMzNzYwZDY4MWJmOTEwMmQ4YzE2YjZmYzQ4NTNlN2I1ZTA3NGJjNmJjYmQ2ZTlhZjZkYWEzMmI5ODE0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI1ZDNlMTM1YjhiY2JlYTgyNjA5OGQ5M2ZjYTBjN2UwNzk1OWI0MGU3NTZlNjlmMmM0ZTVhYzllMzFkMWE3ODM1In0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L32-L158",
+          "version": "repo-lines-v1:sha256:a782d9b04070195a795781b6c724d39cdd1dce5383afe39de2970d02721bd81a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTI3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI2MzJjNjNlYmU5ZjIzMGFjNjkxNzZlZDI4ZmE0NzM4ODY4ZTZiNTAyYWZlOTA2ZWU5NDUzY2RlNzkwOWRhZjJmIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0NzYzMzc1NThhYzdiZjAwN2E5ZDhiOTBhMmRkYmE4NzRmMjQyZTYxYjUwNGFkY2QyNmExMGM4ZmRhY2VkN2RiIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlYzhjYmM4YzFhM2Y5NDIwYjM4NzIzYTcyYjVmYjE2ZDI3MzI0ZDE1YWE1YTgzNWU5N2E1MmZiODkzOTgxMjY0In0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L371-L470",
+          "version": "repo-lines-v1:sha256:c38c0e3977bc31092b7ee41e5e5b29565661a6351c78636d272a7b53be0287b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3Y2RhNzQxYzA1ZjYzY2MyMGJjMWJhZDgyY2I3OWVjZTAxYzQxY2ZhODJhMmY1ODQ0MWViMzg4MzQ4NWI5MjI5IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlYzIzYmQxZDRmZGUxOGViNDJiYTQxODBlOGVlYmY3ZmMxNDM3M2E1MjczZjExNjYyN2Q2OTEzMjMzNmZkMWUzIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI2Mzc0MDE4YTdhYzg1ZDdkN2MyMTE2YzE2NDJkZDk4MjljNGQyOTU4NzcxYWZjZWQ5ZmYyZmVjYmE4ZTMxNDA2In0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L615-L745",
+          "version": "repo-lines-v1:sha256:9b05c74d762ffc4c36abab9dfe0dd98a405005f189bd29c19bcbd7094af69573:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJjZTI1NzQxZjhjNmRkYjFkZTAyZjI3YmExOGIxOGQ0Mjc4MDkyMmZiMDYwMjFlYjhmOWRiZWZiZjA3NjdkNWQ4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIxNWIxNjU2YTAwYTdiYTNjYmU2MDU0NmZkMGU0ODUxNjVmZGNmOWYwMzVjZTkwNDlkMDg5ZWMyMGNhZjQ3ZTcyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5NDI2NTgyZGQ3Nzc5M2IxNzVlYjUwYWUyZmRjMTRjMWU0MzgzNThlYWM2MmY3YmY4OThkNjU4N2UwZmU1MDNmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI3ZjY3YjAxOGE1MTA5NmVkMDdkZGQ5OTZkODc1NmM0MjI2ZGViOTY5ZWUxMTZlZjFiNjczYTI2NTA5OTY3ZjlhIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_3a9edea565ee4750b79f2fc41f1f3cd6",
+      "statement": "Run bars use the maximum of cumulative buy-side and sell-side activity within a bar, do not reset on direction changes, and emit against `E[T] * max(P(buy), 1-P(buy))`; volume and dollar variants keep adaptive expectations in the same units as their accumulated values.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/run.py#L1-L22",
+          "version": "repo-lines-v1:sha256:41e0b79217fa7b389c5aa45ef61badcf2170b9eeda1b98f4fabbe4f4e3fbbe5f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwMTFmY2IxYzI4NWI0ZTU5MmIyNzc2NjQ0NTdkMzZlMjA0ZDMyYTQzNjg5ODZhYzc5MjdkMGYzM2Y2NzRkMDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVmMTY1ODZiMjAwZWU2NTc0ZjVmMzI5M2EyMDVhNTNkZDg4YWI4ZGZlYmJkODNhYWM1Yjk2NTYwNTIxNGQ5YWMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/run.py#L39-L173",
+          "version": "repo-lines-v1:sha256:07c7f1524dd110b49c674b7b8f8b3501a93701f16ef3a04864353f9184623ccd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTM1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzMGMxZjE4OGYxNDJlZDdhODI0NjgwYjIwNzE3MmM1NTE5YmM2MTRhNDhmZGE3Y2YxNjdlZGI4ZGRmNzk5NTZjIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3NDFkODQ0Yzg1NDhhOTE3NzE3MmQwYmEzZTAwYjQ2MGEzYThlOTZhMzgxYjk3MTk5OGIxOGY4OGM4ZTU2MWM2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJiYmNjMGUyMzg5YTMwM2UwMzI1ODE3NDkyMTMxZGFkNGRjNWM1NjY5NzRjYzRmYWFjYWZlYjZkMWIwZWNhMDk0In0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/run.py#L428-L462",
+          "version": "repo-lines-v1:sha256:9f97546a9d4cce6d3b4c6adc8a374c8976a8bc03eab7e2c20ad50aeaf42ef37c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyZTk5ZmJjYTA2MWNkNzAwYWQwYjQxZTU0OTY2N2VkNzM4Y2MwNzVmOTE1MTA5MWIzZjIzOWFiYWQ1Y2M2ZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4NjgyZjc0ZDAwYmM4MWEyODM5MWZlOWZlYmYwN2QwN2EzNWY2YWI4ZDlhYTljY2U1MWIzMWNlZjBiNzE2MGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1ZjYyMTY4ZDI5Y2I2ZTQ5NzEzNWFhYmZhMzMwODFlMTRjNTcwMjMxNGFmMDcwN2NkNTNhOTM4ZWFiN2EwNzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkZTM5YTc0NGVkNDhkMGVkZDk4M2E3MjM5ZjNhYTIzNTRhOTg2YWVlNDZmMGFmOGU4NzAzOTMxNjNmODkyYTgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/run.py#L641-L675",
+          "version": "repo-lines-v1:sha256:8819d394ad370a5c7aef06cfe95478e2f78a927a80640bd911c489f0bf38e79a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzMTAzNWQ5MDM0Y2U1YjIyMzhhYWVkZDhkYWM5OTU3NTM2NTE4MmE5MmRhZGE1ZTNkNzY2ZWMzNzMxMDM4MjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2YjYwZTU2Yzk1OTk2YzI3MWZlYzM4OWExNTY4ZDkxMzUxODEzMzRjNzE3YWMwNDBhYTU5ZTc2MDdjODE0YjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkOGVkZWNhNjFkYTc1N2VjMThjYTk3YjVjNDAzZGEzNTQwM2NkYjNiMDMxODJlNDk2OTdiNjVkNDE3NzAxZjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1YTM3ZmFmY2UzNzJkYjA4NTA2NjZlY2M0ZmU3MDVmOTZmODA2ZGQwMTE3NGM4NmM5OTY4MmY4YTQxZmQzMzUifQ"
+        },
+        {
+          "resource": "repo://tests/bars/test_run_bars.py#L373-L419",
+          "version": "repo-lines-v1:sha256:0400ec5d4fa5f2ef9a8f632e74c74195536e826a7b458ab82874d59f38d0739b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyMGVmY2FlZDYxOTQwMjNiOWY0MmQ3ZjNjZmIxMWY3YjgzMDY3OTQ2ZmEyOWI0YjVmZjBiZDNkYmFkYWE1OWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJkYTE0MjA2NDhkMWJlZTljZGNkODlkYzY1Njc0NDUzOTUwMGFlODU3OWZjNDk4MGVmZjRmYjJmODA2M2Y2YzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1YTg3YWE0MmQzNzUwOGRjZWYwNWQ0MjU2MjFmYmFmMDMyNGYzYmM2ZmIzYzI4NDRhN2IxMzA3MjJlYTMyMTQifQ"
+        },
+        {
+          "resource": "repo://tests/bars/test_run_bars.py#L89-L159",
+          "version": "repo-lines-v1:sha256:1a9f93f58979b5405a51cc31bdf11c9aa312ea7b103f7c820a0b9dbd9755239f:eyJzZWxlY3RlZExpbmVDb3VudCI6NzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0MDY2MzlmNjU2Y2NmMmY4OTI1M2FlODhmOTk3ODY2YjA2NjM1MjAxZjQ5ZjFmZWVhYmVhZTU1OWQwNWNkOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBkZjA5ZDQ2M2ZmNjEyOTQ0NWNmYmI2Y2NmODNhZjY2YmUyZWQ2YWZkYmM0OTRjOThiOTZmNTE3ODNhZjc4NGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNhNzhmYzAzYmUyMmQxYzI5NjFhOWU4M2U0ZjZhYTg2YWEyODMyNDZhNWY5YWFlNTYyN2NjOTAwMmYxOTdhOTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8a009590aee04be98fce64bc6a0c3c8d",
+      "statement": "Sampling is batch-oriented rather than a cross-call streaming continuation: within-bar accumulators are initialized inside each sampling kernel, while adaptive volume-imbalance sampler instances cache the initial mean-volume estimates obtained from their first nonempty sample.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L563-L571",
+          "version": "repo-lines-v1:sha256:92a0ce6efa75806f16c18d6026fc4c100ef072bac7c468ecd1fb27a94c8073e4:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEzNzQwM2Y2ZjYyMWYyOTk4NmZlMDU0ZjYwYzk4NmRlNGQ4NDUwNDczMGI4NGYwMGQ1NmM2Y2Y5ZmY2OTlmYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWRmODFkZGQxN2JmNTNkODk1NTQyYTFlMzM0Mjk3NjY2ODU2MTBkY2Q1MTAxYmU3YzhjZGE2NjFiMjIzMDdiZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTA1MDE3NjM1OWY0OTk4OTI3MWY4MzQzNzc4MzU3NzUzZjNhNDc3NWQyZDdmNzJlMDU4MTk3NjUwMzNkYTM4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTMyNDA5YThlYzM5MGY3ODdiMjkxOWU0M2ZjMGVkMzljNTRlNGIxZjg5MWU2NDRkYzk5ZDc2NjQ3MzQ5N2U3YiJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L630-L646",
+          "version": "repo-lines-v1:sha256:9adf1293a16205f97e8bf7afc0f42ef0cc89acfec58743a077cc2fce277fad56:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwODRhODQ4NTgxM2ZlZTAxZGJhNjJlZTdiNTg4ZGZmMWRlNzk3NWZkMWZhNGQzZTJjZjI1ZDQyNDc4MDU3NDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ1NjY3MGJhMjdkNzQxYzNhNDY4NzJlNDA5MmQ0NTBmN2Y3ZTc3OTEyOGZlMmY5ODNmMmZhZDg0ZjJjYTA5MmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYxNDE4MzU4ZGNiNDQzYTM0ZTMwZTJjNWY1ZTNiZDdiMWMzNTMxNzg2ZWQ4OTI5ZTY5ZGE3ZDA0NjY3N2UzNDYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/imbalance.py#L87-L99",
+          "version": "repo-lines-v1:sha256:39e7577368a5e28499f51a3db98a76474b94162ab2dc731502bd5fb9ea4f0070:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4Y2I4YjViNTI5ZWU4ZDVjODc1ODZmZDQyNTM5ZDkzZTgwNGFkNjNkMzA4YWFhZWM2NzNhYjM5OWQ5ZjI2YmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NGQyMmYwM2EwNTUwNjZhZWU0ZTkxYzhjYzJjNDhiYzA3MDMwNzQzNTYyZjFhNTJiZGFkOTMyOTc4ZTE3YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcyN2Y4NjY1OTk2MDg1YWNiYWYwYzJkYTQzZTBkMmQ4ZGFlMmE2YTQ1ZGFlNTAxNTFhOGNiY2YxMTJmODdiNzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiZGI5Yzk1OGI0MGIzMmRmYmJkZmM5NzhiMmVjNjA3YTYxNTIzNGE4Y2Y3ODFlM2VmODNhY2FkYzFlNTM3YjUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L406-L412",
+          "version": "repo-lines-v1:sha256:55b3d0ea41481ae96686b2f41c19b8fa4f3eb4531a8be19b3b1008fa23f57184:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQwYzE1MWJjOTQzYzk4YzYxMDFmYTYzOWE0ZmEwNWRmY2QwNzVjM2VlMjQ1Y2IyM2U5OTNjMWIyM2YzM2NkMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWZlN2M3MGVmMDM5ZmM1ZmFkMzNkMjE5ZDhkZjAyOGM1YmQ2NDI3MmM0MzYyYmI3NDdkMTJkNWQ3OWYxYWVlZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTY2ZmEwYzU2ZGIzNzIzYWYzYTIwOTBjNzdhZTFhN2U4NGU1ZmE5ZjhlODhjYWZkZjlmNmMzZmE1NWIwOWZjMSJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L426-L442",
+          "version": "repo-lines-v1:sha256:8cdacdc1ebbbdbc452525fa75a38ec514fe3beb20bb3677e48e380e74d66b8f0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4N2ZmMTkwYjM1NTNmOTM3MDhlZTExOGJlYjkwODFkNGUyN2ZlNjMwOWE2NDY3ZDJiYTFhYmRhNDFhZGFmMTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5MGMyMmQyMTVjZTIxNmI0NDdlYjNmYjVmNTM2ODBkODk5MjRmZmEzZTQyNGJmMzU2ZDNhMTMyNzA2Y2M5MjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4MTc4MmVmMGE1Mzg0YzU1Y2ViZWY4MjRmYzBlM2Q0ZGNiNWFmYjMzOTRlOWNkZDc2NjJhODBlMGJiNTQxMjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_33331ec46d9a4daf9d0315760b374092",
+      "statement": "Volume and dollar bar outputs add side-volume or notional/VWAP metrics, and adaptive imbalance and run outputs include realized and expected-state diagnostics that make each event boundary auditable.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/bars/run.py#L282-L311",
+          "version": "repo-lines-v1:sha256:9201495a7bdc703f1edb0b2a8af44f72ecc5ebfbd8485074413cc78f0615dc53:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0NzVlZTg2YjdjNWJhYzg0NjVmOTM5MWJlZjIzNWIxODA1MDE0OGM3N2I1YTgwMzQ5OGRkNWYwN2ExYmU2NjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc3NDhiZjdmNGNmMWFmZmE0NmU0ODdkMjQ3ZDQ2OTMzZjc3ZGU5NTFlMmNlM2M0NGNhMTRhZWI0YzM3MjRhNDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE0NTFiYTQyMjQxNDIxZjM4YWI1MGNjYzNlZDFlZGVjN2NkZTE4YzQ4NGY5NGQzODA1YzVmYjMyMGJjZDVkNGQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L157-L181",
+          "version": "repo-lines-v1:sha256:a56fbbbed6673ed870ac62d1436e4ac2eb2e9ae54bdd7af1d8c7a0413ad87f4e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkN2Q1MzMxOTVhMzQ3OTkxOWQwZWIwOWJlY2I5MTBmNGJjZjdjZWU2MWUyMjBiOGJkNjE0MTcwY2YzZTkxMDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZmNzE1NDY1MzcwYjhlZWU5NDVkOTMyZGY4ODlhMDMxMzcwODFjM2Y3ZGY2MmRhMjY3YTY2ODE2ZjRjOGMyOWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY5OGI3ZmJmNmE5MTNjMGVlZTM4MDhmM2NhMzIxNDlhYmVmYTBhNWM5MmUwYTE3NDBjYjAxODFjMzQ1YmFmMTAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L254-L269",
+          "version": "repo-lines-v1:sha256:cc7ab7d528f4ce0c11066ddc116673b88d3ec2c0c5551d3b4582cfe6324565c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyMWMyZGYwNWE2MTFiZTFlNjE0M2ViNWQ4ZGYxYzRmNTVjYzQyN2UyMjdkY2EwZGM0YjdiMzkzYThhNTVlODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwYjEyYzc2MjBjNTM3MWM1YmFlYzM5ZDNhOWI0YWY0ODNlMWQyYTYyMzM4MDdlZjA1ZmU4NzU2YzMxNzA2YzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3NDlmNTYyYjUxY2I0Zjc1MDg0MmM2YjVlZTQyNGI2ODlmNTg0MDcyNzA4NThhY2QyZGRmOWE1ZWNkZmRhZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY5NGJmOGQwOGQ2NjhjNjFkNDkyMmRkOWM3OTc3OGJhOTQ4NWViOGQ0NzBmOGY4YWMxMjBjYjI4ZjY5ODhhMDUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/bars/vectorized.py#L496-L553",
+          "version": "repo-lines-v1:sha256:b6cf803633c4e6a523629b65c3b63fbc5cb6e77000cbfaff8d11e83c54f93a9b:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjNmRkOGVmMDI1Nzg3ZWJjMTBkNDE2N2M3NmZjZjllMTAxMGYzZGJmY2YzZDc0NjY4YzdhODMyZDYzYmJhZDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZiNTliMzg3YTU4Njg4MTMwYWI5ZGQ5NWFhZGI5MGM2Zjk1NzE1MDE0YzA4NjA5OTMwODQxOWZiMzVkMThhMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzNzM2YjY4MjExMWU0Y2I1ZWYxMjljNmU0ZmZkYjQ3MTk2M2U5ZGExYmZhMjUwMmZhNTEzM2I4YTBlZTk3YzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiZWFmZjRhNzNlZWE0NTk3Yjc2MDE5ZWM2NWE5MmZlZDcxNWU1ZGEzYTEyMDJlOWNhMmI5ZGNjNjNlYjM3NGUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:41.957Z"
+  }
+}

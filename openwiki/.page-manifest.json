@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/bar-sampling.md": {
+      "pageVersion": "sha256:f18d3edc9378f5f660f14b6ada975c627cd34390839685df612d6ffff53fbe6c",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/architecture/dataset-preprocessing.md": {
+      "pageVersion": "sha256:eded5268b2684b56500d7ba150da0e7335dea2afe991b8587caf9b1ee997fe33",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/architecture/feature-computation.md": {
+      "pageVersion": "sha256:0eb596d9c0b7893fbd70eac69e78514a6f1bcb450d15b9f9b835a204ded16493",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/architecture/labeling-runtime.md": {
+      "pageVersion": "sha256:0034b18fc21e75f7b941b132fd55874f6c40d08c900e22bd3517f81c62ec01c4",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/architecture/system-map.md": {
+      "pageVersion": "sha256:aa3fe547ed91a1effb65dd4d6ab3e5bf6b221effd510eea805327c660899e18d",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/concepts/temporal-data-contracts.md": {
+      "pageVersion": "sha256:c8ac9c5f4b65153f9b2b53781e0414588d6e96f741368f77357ecdaaa7dc8ed7",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/operations/offline-feature-store.md": {
+      "pageVersion": "sha256:fa02232096c11a0d2b8aa1f3ba3fc695a20c9558d7f3f6b7faaec8e147ce1c30",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:fbb9b93d008e542cd5dabcfc0e5cc4e5be9928561673cc38ed79390df2e49c7e",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/testing/quality-gates.md": {
+      "pageVersion": "sha256:c7542bbe5cfd491665efedc31c4df6b3f7a98b6593abdaf9cd333989873fd302",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    },
+    "/openwiki/workflows/adding-or-changing-features.md": {
+      "pageVersion": "sha256:74205bd447836448d52720ad5559e6374c5d79da3b642a37a5e656ca57cdae60",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "75ecac11-b927-4291-ba95-773bc28ee896",
+      "gitHead": "443db5c2afe7fc0dfccfc5019cc8d2301763a314",
+      "sourceFingerprint": "sha256:7e0db042ca714af0ff7468f489e2ed06990aa27235f94b03086ab9de3b15a45e"
+    }
+  }
+}

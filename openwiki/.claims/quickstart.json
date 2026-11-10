@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:fbb9b93d008e542cd5dabcfc0e5cc4e5be9928561673cc38ed79390df2e49c7e",
+  "claims": [
+    {
+      "id": "claim_c3dca05947ef413fa88e577c79fe39f7",
+      "statement": "ml4t-engineer is a Polars-first library whose primary workflows cover registry-backed feature computation and discovery, financial labeling, alternative bar sampling, and leakage-safe dataset preparation; its stable starting points include root-level compute/discovery/dataset APIs and direct labeling and bars submodule APIs.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L1-L34",
+          "version": "repo-lines-v1:sha256:9f79b66a773b157ad7e025b8ea6de2002c588d92e750e4315396d3c83687bd7e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmZWM0ZTIwNjFkYjdiMGU4YTY0N2MyMTNhZTI0Y2NmMDBlOTc4NmI5MGMyOGRiMjBhMWYwOTFiYjVlYmI5ZWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmMzZhMWU1NjJmNDk3MDI5OTUzMzlkZWQ0OTYwNzZkNDNlZjY3NWIxZDc3YzU3M2NjNzIwZWE2YTAxOGEzZjkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/__init__.py#L114-L145",
+          "version": "repo-lines-v1:sha256:3b27424a6fbf1305e3fa07995e2cd6f2933773ceb822f69252ea457310c681b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NGRmNDA0ZTExMzFkZjVlOGY5NjhkNDIyNzQ2NGNmMzc2MTliZjFkYWVjMzg5ODNiMGRjYzQxZDY1OTE1OTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM5YzNkMjEzMmNmNWRmODg5YTQ5YmFiZDU1ZjZhMzE5ZWM5ZTBlNGExZTI4Y2RiNWVhNDk0MmZhYmM2MWFhYTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/__init__.py#L14-L39",
+          "version": "repo-lines-v1:sha256:57dc6bdffc78217469fd06e36b1b570eba24ffc5e70d53ce457c799da53532fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImExMTM0ZjM5ZDk3YWM4OWIzNWI4ZGNkMjU2ZTFkMDdiNzBhOTQzN2FlMWYwYzU5NGY1ODE0NDJkNjZmZjhhYjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5NzcyY2E5OWQ4ODQwYmE3YmNhNTc0NGExNzc3MzdkY2U4YzdhM2Q3NjdjYTE1MzBhYWZmM2I1ODlhNmJmMWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmMzM3NzJhNmFiMjIyMDEwNGZlMmE1NTRiZWE5NDY0ZDM2YzE3NWJjYjM1ODc1Y2Q1YjI0YTliY2JkZmIzMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwMDI5MDcyODgwNWI5ZWY0MzA3N2ZkMGQwYWI5ODg1MzEzNjQyOWFmZmM0Njg4MDZlYjBjMjdjNWFkYzdhYzAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_db9b6aade83b4d098a55e19367c67803",
+      "statement": "compute_features accepts Polars DataFrame or LazyFrame inputs, validates and normalizes feature requests, resolves registered dependencies, executes them in order, and returns the same frame abstraction with feature outputs appended; explicit calendar=None selects observation-row mode without schedule checks.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L191-L289",
+          "version": "repo-lines-v1:sha256:6b1d1aa7dcc2d6de58b59b02a854ce36f62f9c2708fd996302675e2b463f8b86:eyJzZWxlY3RlZExpbmVDb3VudCI6OTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiNTJkMmExOTYyOTUyODhmNjk5YmU4ZGIwYzVkNGMyZDhiYzEwNmYzZGE1ZjAzYTMwYWMwMWEwYzkzZGRmMWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMDNlNDdmYTQxMGY0NzllNGQzYmU2NDFlYmU5Y2ZlNmUzYzZiYWRjYWFhMDZkNmQzY2ViOWNiMWQxNjIwMzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmYjAzODcwMzhlOWQ5MTNiZDUzZjdhZTljN2UxMzgwZDczMTM4YWM2ZGExYTI4NDE1MjVmODMxMDMwMDcwODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhmYTJkNzY1ZDcyMjhiZDdmZmI0MTBlZDYzZTRiM2I4MzUzZTU1NWFiZDY1NjQ3MDE5ODNhZWViMDkzNmM1Y2MifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L65-L134",
+          "version": "repo-lines-v1:sha256:886a50c68b6dc81c5baefb509c7212336aaa092308bd5fe71263cdcd056c4d9b:eyJzZWxlY3RlZExpbmVDb3VudCI6NzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1Y2Y0YTg4MzIxNzU2OTYwZWFlMGMwYTcwYjNkOGNiM2QxMmMzOWI5NDgzYjkwMjM1NmI3NDE1OGRmZTAyNTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllY2YxZGY5MjE4MmMwMjg4ZTg4MjQ0NDE2NTE5YTc2NGNmMDc1ZjhjMDE5YjkyYTRiZjA5N2Q1YmIwNzNkOTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMxY2M4NjFiNDFkNzY4ODIzNTBlMjQ3NmFhZjI4MGViMzAxZDUwZDFhZWUwZGM2YWJjZmZhOWYyMjQ3NWVjNDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhMzg0OWNkMjc5NWQzN2FjZDY4NzA5ZjZjNDY3YjQyNzBlMGMzOWM1MjQxMmFlNDI5OWYzM2I1NGZmMTZiMDAifQ"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L88-L101",
+          "version": "repo-lines-v1:sha256:ffe9e9f4c3d256bd3184941196889db4d5e7cd4d9723e4c44e26f4fd34b28511:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1MzFhZTc2ZmY2YTY4ODZiNmIzNjRkYjRmMmExZDU2NTQ5NWY1NzNlOTE3N2E1OGFmNzhkYmE2OTljYzIyYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxMWIxZDIxMGRkOTBiYzBhZTgyMzU2ZTMzMTRlZWNmYzQ5MjhmOTc4YzljNDU0NGFiNGM0MmY4ZjJhNGE0Y2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdhZGY0ZDYzMzNhNDQ2ODFlYjkxY2Q2NWU0NWRjNjkyMmQ2NmE5MTk2NjdkYzVkOGE5MDdjNTQ4MDNjN2EwNjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a288886bc1474b4abe8eb07638478a43",
+      "statement": "Registered feature behavior and metadata are coupled: the feature decorator validates declared parameters and defaults against the callable, binds authoritative lookback behavior, and registers metadata that computation and discovery both consume from the registry.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L365-L408",
+          "version": "repo-lines-v1:sha256:49f305fab1e2cfd5481fecc8007ed4a3039940262574e92299999fa93ca4752b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzZjc4YTExNDNkZTBmYjg2YTVmZDNlMDdmZWUyZjA1Nzc5Zjc4MWJjMjI4ZTA2NmNhNWJmNjkwMmNmZDBiY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MjIzMTA2ZmQ4NzQyYjcwZWEyMzNmOWRjMzU5ZjRiMDJiYmIwNjliNzI4M2VlZjc2MjQ5OTUxNmJkN2I5YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwN2JiNmM1NDYwZDdkNTMyNDljMWMxZjZlMWU2OTM0MThjM2YwZmFiNWFkMjEwODE3ZjJkNmNkMDM3NDA5NmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/decorators.py#L120-L199",
+          "version": "repo-lines-v1:sha256:fada1e4ac7a534799a2991887c55fceacafe12f3d296fc9438b34b2d5ea8c78c:eyJzZWxlY3RlZExpbmVDb3VudCI6ODAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY5Y2IwZDI5MTllYWU0NWNmZGMxYWYwZDEyNTA4YzMwOTZmZGJjNzdkODQyYjMzODM5YTBhZDZjZDdmNjlmYmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2N2IyYTM5MWEyOGIxZDk0NzIwZDdjODkyOTljNzAwMTUwOGRhNmQ0NjRmNjhhYTBhODI3OGVkZjk4ZmI0MjQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/discovery/catalog.py#L43-L81",
+          "version": "repo-lines-v1:sha256:c357d32454679a25e7f2a2dac711db5ff33efd201453a932e30bdd307164e8ef:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1ZmU2Y2U5MjJiZTJmNzUwOGI2Y2IxYjdhODZjYmViOTQ1NWM5ZDc0ODBiNTQ5YmZlNDI0ZTlmYTNhZjczOTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkMzE3NDMwYzhjZjViY2FmNmFiZjg4ZDlkM2NlMGNlNTlkZWVlY2MwZDc4NGFlZWNkNDMwMDc5N2Y2YTBkNjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzZDllMjJlNjZhMTdiM2MwZWQzNDNkNTA5NzQyZGYwZWNjMThkYjA5NDE5YTk4NDQwOWE4Mjk1ZmU3MjJiMmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0187caca645448eeb584926a879de1ae",
+      "statement": "Dataset preprocessing is leakage-safe by lifecycle: each cross-validation fold clones the configured scaler, fits it only on training rows, and transforms train and test with that fitted clone; a simple train/test split likewise fits on train and transforms test.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L421-L505",
+          "version": "repo-lines-v1:sha256:f9624896938d1c60b9d154f15ce711312ad24f2abc65673b3cc86ab36ecea088:eyJzZWxlY3RlZExpbmVDb3VudCI6ODUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyM2MzOTE1Njc3YmZlZDE0ZjdhOTg0YWNkNDk2ZTlhYzMwYTdhM2VmNDJlOTgxNTYzNThmMGQ0NTJhMGJhNzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1ZWM1ZmU4ODhiMDkzYmJlYTZiMTE1YzZiMGU5MTIzZTRiNzU5MWNhYWJkNjc2YTMyNWQ3NWQ3YmE3YTU0ODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0MmY1ZjE1ZWI1ZTBhMzFkOWVlMDg5MGY4MjkwNjAwYzExMWMxYTBjYjFjMTRmYTg0MDYxNjQ5NjcxZjNjNzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjExNGM0OGExZjVmODdmZGJhZDVhMDUxYTRmODBiMWRiMTAzMzA0NGZkNTE4M2U1MWVjNTM3ZmY5ZTJjNGNiZjUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L517-L582",
+          "version": "repo-lines-v1:sha256:1780a365974ceb5e17d013e1b84f3894be407b170a7483fd69d4f3ca695a4a85:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2OGY5NDU1MjM2MTVmNmZhYmI2ODI4NGVhNDA2YjY2MjNjZTI4YWM2MDgzMDVkMTJlMTU5NTBjYjFkY2RlZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmMmNmMzdlNDg0NmY3ODVkY2Y1NDZkOTk3ZWVmNzZiMDViOWYzYTJjMDkyMDg2NGM3ZmY1NDM0Yjc0Yzc5OGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4NWQ4OTM4ZWFiN2JkNWE1NjM1ZDc2YjQ2MmRhMTkwYzAxNjA2MmY5N2YzZDVlMWQ3NGVkODdlNDA5MTViM2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUwNmVhMjliMDM3OTdhOGYwZmUwMjFhMGQxZjUwMGYwYTNkYzI1OTYyYTRmZDEyMjE2Y2E3MTNkMjRmNmMwZDYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_39a4909587b942c8bd6662afe94a0f51",
+      "statement": "Optional integrations must remain isolated from the base import path; dependencies such as TA-Lib, DuckDB/PyArrow, market calendars, visualization, statistics, and ML tooling are declared as extras, and the DuckDB store guards its import and raises an actionable FeatureStoreError only when construction is attempted without DuckDB.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml#L55-L120",
+          "version": "repo-lines-v1:sha256:cb0700a11c643c06a2d106cd1a61dd2bd512fa7ca683c167833aa25ab8139efc:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2OGQzMDllODdjYWExOTY3MmNiODczY2ExYzcxMjg3NGE4MDcyZDAzNGI1ZDY1YmFlN2Y5NmNmY2NmMDM2MWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmYzQ1M2RiYWUyZGIxMjNkNjc5ZmRhZTdiOTUzZDllOTA1ZjY2MWU0N2MyY2E0OGUwOGRlZjExZjQ0YjFiMjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY1ZGI4N2NiZWIzYjJhNjY2YzdhMWI5MjM2YTc3ZDFlNTcyYTZiY2U3NzEzZTNiOGU1MDAwMGZkODYxOTBmNjkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/AGENTS.md#L19-L27",
+          "version": "repo-lines-v1:sha256:9eb37298459da25e750d26a573be2d199d835476177d832ebe0d7f91de5a1579:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWI5ZWJjZGU2YmUyMjBlNTU3MDRlZDRjMzg3NmI4MTE4YTRmZDZlODYzOWQxMDE2MzZhMDIwZmVlODczMmE1NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjgyZTNiMjI0ZTcxY2Y1OGQ4YTdmMWZkMGY3ZTg2ODFmYjY0NGE2YzkxMzkzZTVkMTUzMWZjYTliYTY0M2VlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTQ1ZDNkMGM2OTIyMDdjYWM3ODAxNjYxOWRkNzUxZjUwOTBmYmU4NTJlYzhiMTRkNDUxZDQ1NWMxMWQxODZkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzdmMWVmZmYxMDY5MzY1YThhOWIwZThiZWI0YjYwN2MwMDA5NjdmZWI2MTNkYWM1OGU4MjZmYmUxNGVjNWFjNiJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L106-L120",
+          "version": "repo-lines-v1:sha256:319c3002ed1fa4acc424eb0ffe01bc6fe4f6cdfecdf5cce042a0e8df59576384:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5MmZmZmRmMGE1MTE5OTg1YzRkMWU1MDFlOTFlYjk3NjA1YTEyOTQ5NWQ2NWNmZDc1ODY1MWFlZGFlM2EyMjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1NzNiMjJiZTNiYjIxMjRmMzMwNGY5YzAwODMyMjBlOWM4ODY1ODFmMzJiNDk3NjdlMzIwNDM3YmU1ODhjMjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImViZGMxNGM3MjNmMjcyNmM3MThjZGRjNzA5Y2NlNDJhYzYyNTM5M2ZhYmNlYzI5Mjc4OGI4MzRiZjU0MTY4N2QifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L21-L40",
+          "version": "repo-lines-v1:sha256:1a47eb9acafdf2323938d2e8c61f8de6c43a03dd4043bef908cf3efc196d9fbf:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIzMTc0NmRjYzZiZWNlZTI1ZTFjMGI0M2Q5ODZkNTRlY2Y1ZGI5YzhkNTU4M2E5NTY2ZGJiNzc2YzY3OGY0ZTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MzlmNmFiNDYwZjkzOTQ2YmMxZGY3ZjY3M2I1OTMyZDNiMmUwMjczMzVlYzg0ZjY4ZTc4YjNiMjcyYjYzNDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkZTU3NGZjOTI0N2JiMzJiMWE0MjllNDg2MzY3ZWM0ZjE3MzA3NDIwYWY4ZWQ0OTFiYzFhNzdlMDU0ZmE2OTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMWQ5YjI5NjRmMjIxZTA5ODliNWI5OGI1MGM0YjM5NTA0NWFjMjEwODA2YjgzYmFkMDYwMTk2MzliNTZiYzkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ed9fd1a635ac472c99821c3e0bc14dd0",
+      "statement": "Shared market-data, temporal, and artifact contract changes are owned by ml4t-specs rather than local redefinition: ml4t-engineer declares a bounded ml4t-specs runtime dependency and consumes FeedSpec and related temporal primitives in its public feature workflow.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L35-L44",
+          "version": "repo-lines-v1:sha256:6ee222e8d55def5731ae7c0f59668aae253a2759a3a5c15975e9fe5c63b0e8e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmMzJlM2NiYzM2YzIzNDBmMTRhNTkxMDJkMTc3NTc3NmM3YmNhNzM3ZjQ5ZjgwMTZkNzI0YjJkYjJmODgzOTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY5MDAwOTE2ZjEyMjk5ZjI2Nzk3NDI5MmUzMjk3MzhhM2UwMjI5OTRhNGJjMjMyMTkyZjM5NjJlMmIxZmU0NjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1MWI0ZGVlMWE0MmRjYjRhYTQyNTVlNzk1MTkxNTM0MWY5ZWQ4NjgyZmIyMmFjZTkwMTE4NmEyNDQ2MTI4NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVkNDJlMjAzYzQ1YjI5NTljMzlhZTRiMzkxZDI4NDIyYjQ1OTdiMWVlOGZkOGZkZDMyMzc4ZDFkZjM4YTVmZDQifQ"
+        },
+        {
+          "resource": "repo://pyproject.toml#L55-L59",
+          "version": "repo-lines-v1:sha256:b4aaf92f67d594690f7b26cfbc9073e232f5ab3ce049dc489f3d8de58aad9ea1:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk0MTZlMDlmNzhiYTMxNmMwMzI1NjgyMTNiODU1ZWU3NTZlNDE1NjVkOTE4ZjA5NTE5YzgxZmQ2MjBmNDA2MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjMyNzBiYTZlNzUzZDc0NjE1MzljMzNkNjI5OTc1ZDQyMWY5ODVhZjllM2RjNGQ5ZWQzZGE1MGFmMDFjN2QzMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2ZjNDUzZGJhZTJkYjEyM2Q2NzlmZGFlN2I5NTNkOWU5MDVmNjYxZTQ3YzJjYTQ4ZTA4ZGVmMTFmNDRiMWIyMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTNhODg5M2YzMzJhMTE3YWM4Mjg0YThmZmIyMGFhZGE0NDYxYWI3ODg4NWZiZmE2ODQ1ZTk5MzIyMzEzY2ZkNiJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L102-L129",
+          "version": "repo-lines-v1:sha256:1f58f8c64869dfbf184a8172b93fee43cac034fe6dfae6f0c8434cfd944db61b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiOWU2NGZjMmFmZGM2MzhjYjBjZTk3NTRkYjYxNWVkYzQ4YmQ2OTc4MmQyMGZkYzc5N2JjOTY3YmY4YjQ2MWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmNmFmNzNhNmRjMzJlNGIyN2JlYTcxMTYzOGI3MGQ4Y2ZjOWUzNzYwNDEwZTk5ZDE2Y2Q4NmExNTIwZDFjNzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZkZWEzNGI1MGY2ZDE0OTI3Y2Q5YTIwYTAxZTRmNTAyNjM3Y2MxMmZmM2YxZTk2ZWY4NzVmZmI1NmY4YTZkMTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY3ZDY1MzRlMDlhYTc0OTgwMzE4ZmIxNjBhNWY0NWQ1NjMzODU2YjZiNjBjMmJmNDY0MzQ4ZGI1MGY3NTE0ODYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L20-L25",
+          "version": "repo-lines-v1:sha256:36ec7fa782af1d8b746006111de817288d795ecd2059db755d57ff6f09dbe47f:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2NiOWZmY2NiYTUxNDZiMmRkMTc3YTMwYzMwNTdhNDM5NWViZDVjNzQ1ZDA3ODlkMmVkOTVkMGNmNGFmZTI3MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGQ0Mjg1NWFmNTU0NGE0ODg1MjYzMTZjNmIyZTRlYjM2ODM0ZmZmZGYzMjIzYTFkYjJjYTBkODQ0NWM2MGE1YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDEwNWI3ZTE0OTYzNzE4MTlkOTU0ZTM1NDk2NmE3Nzk4ZDdjZDllYTA5MWM5ZjVjYjc0YjMwMzQ2YzdiNWNkMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8acf88a011da4e21aa7cc699cf5e5706",
+      "statement": "The root package intentionally exports compute, discovery, dataset, and preprocessing symbols plus selected submodules, while labeling functions and bar samplers are used through their owning submodules rather than being flattened into the root namespace.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L23-L33",
+          "version": "repo-lines-v1:sha256:650a3a7a0f1b689ed99950fb83676c1f1a4fcddcb02a904ae53d1b649d3f7e9b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4MTA0OTAxYTEwMGYzNTY4MGI2ODAyOGEwOGEzNDkwMDY2Yzc4NDg4MzliZjYwNjE2MzlkZTZiOWQwM2Q3ODIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MjJhNTNhYzAxYzI5NzNiMmI1MTk0MWVjMTc2MTYxY2FhZjM0Y2FhMWVmN2VlNmY2NzI4MWQxNzI3NGE0ZjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY4OTdkODc0N2QwYTkzN2IyMjY4YmIxZDAzODYwYWY0ODExYzJhMTA3NGI1ZGEzYTkxODc0NDFlNTMwMGYyYjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyMGNjODM4Y2U0NGQ3MDg1MDY5MTNkZjliZTA4YzZlZjhkNTNmZmFhYzcyODg5MWEyMzg5OTNjYzNhMjdiMDIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/__init__.py#L114-L145",
+          "version": "repo-lines-v1:sha256:3b27424a6fbf1305e3fa07995e2cd6f2933773ceb822f69252ea457310c681b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NGRmNDA0ZTExMzFkZjVlOGY5NjhkNDIyNzQ2NGNmMzc2MTliZjFkYWVjMzg5ODNiMGRjYzQxZDY1OTE1OTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM5YzNkMjEzMmNmNWRmODg5YTQ5YmFiZDU1ZjZhMzE5ZWM5ZTBlNGExZTI4Y2RiNWVhNDk0MmZhYmM2MWFhYTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/__init__.py#L14-L39",
+          "version": "repo-lines-v1:sha256:57dc6bdffc78217469fd06e36b1b570eba24ffc5e70d53ce457c799da53532fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImExMTM0ZjM5ZDk3YWM4OWIzNWI4ZGNkMjU2ZTFkMDdiNzBhOTQzN2FlMWYwYzU5NGY1ODE0NDJkNjZmZjhhYjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5NzcyY2E5OWQ4ODQwYmE3YmNhNTc0NGExNzc3MzdkY2U4YzdhM2Q3NjdjYTE1MzBhYWZmM2I1ODlhNmJmMWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmMzM3NzJhNmFiMjIyMDEwNGZlMmE1NTRiZWE5NDY0ZDM2YzE3NWJjYjM1ODc1Y2Q1YjI0YTliY2JkZmIzMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwMDI5MDcyODgwNWI5ZWY0MzA3N2ZkMGQwYWI5ODg1MzEzNjQyOWFmZmM0Njg4MDZlYjBjMjdjNWFkYzdhYzAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6858caedd1df46d7a93a0515b5a116bb",
+      "statement": "Development source supports Python 3.12 through 3.15, and the documented local qualification sequence synchronizes development extras, runs Ruff lint and format checks, ty, the test suite, a build, a base package import, and a strict MkDocs build.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L46-L59",
+          "version": "repo-lines-v1:sha256:095cc16446b8210ce83027aa289a94ee085ebd3d0918cabf5721280204476152:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlY2M1ZGVkOTc5MWQ5MWVkNmJhNDAwMjdhMTNlOTQxM2VjZjExMmQ0N2JiMDZlZjRiZjYxMTg1MmExNGY3ODIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2YThmMzAzNjM3NzgyOTFlYmMxMjA0MDI0MDc4YjA3Mzk5OTU3MDY1ODRkZmIwOWEwMDFiZDAxNTQxMTQzZTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJiYTcwZjEzMTM3ZGJhNGEwNTQ0YmZlZDBhY2ZhYzU5MDBiY2JiM2Q1Yjc0MWUwODM2NDViY2Q5M2NhOTc5NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI4NGJiMmI2Y2MzNDNmNzIzYzcyYjIxMzVkMjVlMWQ4MmZiMDBmYWRkZjI4NDExZjhkYjAxOTk4MGE4ZjJiYzMifQ"
+        },
+        {
+          "resource": "repo://README.md#L102-L121",
+          "version": "repo-lines-v1:sha256:f1c38b09f2cfda241c0d1570456153912899d62a44b7b7e5ca096385c9886599:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjYzc2NmQ2ZjZkOGUwODFiNTY0NzVhMWUwOWY1MTg2ZjAyN2ZmNjg3MTM3YWM3ZmI3ZTIwMjU1M2FkN2VhNGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMTA2NTExNjRkODY5NTI3ZTA0MWVhOWNhODBlZTRmYzA3ZDQ0NjJkMmMyZGMxNGYxYWU0NDI2YjE2N2ZkZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAyMDc5ZDhiYzkwODRkMDhjYmNkZDIzNTllN2Y5YzU1Mzk4ODJkZDljNGVhNjc0ZjliMzAxYWYyNTBiNWY5ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjljYzI4MTUyYWQxNjc5OWY3YWYxZWQ5M2QyYjcxNjFmNmM5MjUxZWZmODM0ZmJiZmM5MzNlMjgwZDAyMTBjYTYifQ"
+        },
+        {
+          "resource": "repo://pyproject.toml#L25-L55",
+          "version": "repo-lines-v1:sha256:11a7fd6a7d02d1536d254664fb8f39f347b98da8310b41acbdfb4003670a2c37:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkNDg3OGFkYzViMWU3NTUzMWU2MGIxNWRhMzdhZGU3ZGFjZTk3ZGFiMTFjZWFkODQ5NGMzYWFkOGViOTllMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc3YzJmZjUxOTdiOGI5YmMxNzlkYWRmYzU3ZDAyNDNhOTI1MmRiZTE2MTM3M2E4MTMwZWRiNzRlNzA5YjNjNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkMzA0NWJmOWRkMzc4ODc2NTE4MGM2ZmY3MDZlZDc0NmUwODZhNTU4YmZkOWU0ZmRhYTA2YjdjZWY4MzZhYWUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ad001213b3eb4ca88d17d26491747506",
+      "statement": "The default pytest configuration uses strict markers, branch coverage, and excludes tests marked perf, so performance tests require an explicit marker selection rather than relying on the ordinary suite.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml#L188-L220",
+          "version": "repo-lines-v1:sha256:6dab4948f699469cb01eafaee23b6f612b0e45cf2b673ce02015a987a3576fa6:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlMmYzNjg1YWMyODQ0ZjFmNjZkZTBhN2U2Y2U3MmJmOGNlMTBhZmJmMGU4YWRjMGZhZjNhNzk1MTFjNGI0ODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlMmNhMTk5MDJjZDZmY2FkZGRkYmY1MGUwM2MwMmVjOWE5NjQzM2QxMThlZTZhNTAyZDUyYTg4YjdjYjY3ZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRiMjY3NjNhNjUzNDZkZDBmYWUwMzA5NmZmMjdkODY1NGVmNDRjNmJmZTc4N2RmZWM0NTAyODQ4MzMyYzUwNWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3ZTA2ZGFlNjk0ODNjMzlkM2EyNzY5ZWZiNDU5ODJmMDAxZjNmYmFlOTdlMTI4ZWQzMTYyMzc3ZjY0Y2U1ZDgifQ"
+        },
+        {
+          "resource": "repo://pyproject.toml#L259-L266",
+          "version": "repo-lines-v1:sha256:1507957c0e3540c07e289e97648385f7b79f43b85776e8ae2bdce07f7c6aa614:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ3NzNmNGNjZGUzMmIwN2U1Mjk3MjBjN2Y3YWZmOTMwNWMzOTQxODU5NTU0MmJkZjY5ODRiM2JmNmQ3OTM5ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk0MTZlMDlmNzhiYTMxNmMwMzI1NjgyMTNiODU1ZWU3NTZlNDE1NjVkOTE4ZjA5NTE5YzgxZmQ2MjBmNDA2MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmEyYjU5OWY2MmNlNjQyYzM1ZGZkOTQ4Y2M4MTM3MTljNmIwMTFmOWZlNmRkMWMzODdhYjkwZTk0YjVkOGY3YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzM4ZjY4MGNmZjBhMWQzNzY4N2RiYzk4MmE1YjQ4MmY3ZDEzMzczNzg1YzNmYzRjNjAxYmJiMGQ3ZmJlODBlZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b87f08eeb8d348399e7fd483a09890c7",
+      "statement": "The root-exported get_agent_docs helper discovers packaged AGENTS.md guides by logical subsystem for navigation; it does not participate in feature computation or data processing.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/__init__.py#L114-L120",
+          "version": "repo-lines-v1:sha256:39df35bae2a5620152b9b9f0707f92adbd48dddd48ef964e61f6140517deb2e9:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzc1YWU5NmNlZmQ2ZmFiZjRmMGU2NmMwNDE2YTAwZDEyMmMwMjRjOTc2YmI4NGU1ZWNlOWFiYzc2ZmI2MmYxMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzljM2QyMTMyY2Y1ZGY4ODlhNDliYWJkNTVmNmEzMTllYzllMGU0YTFlMjhjZGI1ZWE0OTQyZmFiYzYxYWFhNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTUzNTdmOGE2YzBhNjA3MDk4MDUxYmY0MGE4NjRhM2NiYmQwNDExMGI5MGQ1MDhhNWEzOTJhMDUxMTkwNGNjMCJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/__init__.py#L43-L111",
+          "version": "repo-lines-v1:sha256:b426faed9753bdb87fcae86df84bcf50c21b5851e40e68e9fceb384cbfc6171f:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiNjI1M2RmNTk5ZTI1OTZiM2I1YWI2YmEzZjI0NWM0NGJhZDk4M2IxZjcxMzkyZTViMzBlYzAzMzdhZDBjMjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwMDI5MDcyODgwNWI5ZWY0MzA3N2ZkMGQwYWI5ODg1MzEzNjQyOWFmZmM0Njg4MDZlYjBjMjdjNWFkYzdhYzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlhMmJlZGViN2JiMTc2NjdhZjJkM2YzNWUyMDUxZGFkNjg3NzhkOGExZTM1ZmM4NWZhZjUxMWM3YWE5Y2IxODQifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:41.957Z"
+  }
+}

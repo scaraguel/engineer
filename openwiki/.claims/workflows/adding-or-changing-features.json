@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:74205bd447836448d52720ad5559e6374c5d79da3b642a37a5e656ca57cdae60",
+  "claims": [
+    {
+      "id": "claim_0e052b7f4fd94b7eaccc08c2904a3b0e",
+      "statement": "The @feature decorator validates declared parameter names and defaults against the callable signature, derives non-column defaults, binds and validates the default lookback, registers FeatureMetadata at import time, and returns the original function without a runtime wrapper.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/core/decorators.py#L118-L213",
+          "version": "repo-lines-v1:sha256:4b5d586e6c7838f1e048a09d63ec6e569a509dce422a92fe4c6cf8ffcd2b6d44:eyJzZWxlY3RlZExpbmVDb3VudCI6OTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJjYTdjYmI0ZmFlNmEzYzk2Y2E5OWI4MzAzYTJjODc0ZTRlNjc5MTQyYmFjYzQ4NzUxYjU4YWVlODFjOWVmMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MmUzYmMxNjBmMDY4NzYwNTZiNWQwZjIwMDQzOGZjNmZkOTRkMDQxMzUzMDgxYTE1NDcyMmE0MWFhYzg0ODMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMwZjQ1MzhmYmM2OGRkOGVkYTZhMDBhZmYyMDdkMDQ4NTViNzU1NmE2ZjBlMmM1NDM2YzJlY2ZhYzdjYTJlNDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhYWRmYTA3YWVmNDEyM2Q2ZTAzNTgzMTRiMWE2YzI3MzZjZjIxMzMzNDNhYzAwMTE4MjUxOGJlOWVjNWEzMDYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_43d0a957b826490dbe9196268c3d9b05",
+      "statement": "First-party feature lookbacks are centrally authoritative in FEATURE_LOOKBACKS: a first-party decorator-level lookback is rejected, calculated values must be non-negative integers, and feature names outside the table must provide a fixed, parameter-name, or callable declaration.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/core/lookbacks.py#L59-L226",
+          "version": "repo-lines-v1:sha256:63618db1e70bada0cbdef4a11b201b47e3236d17ad12e4f48c7ffb427ba56097:eyJzZWxlY3RlZExpbmVDb3VudCI6MTY4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIxZDYyYjM1ZmFlYjFjOGZhMDE4NGRmNWZkM2IxZGY5N2U3M2RmZDMyZTY3OTcwMDAyMWIxZTMyNzk4ODBjMGIwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3OThmMWZiODJmN2YzZDRmYjFmN2FhNzI5MjIyMGVkMGZkYjA3NDcwOTViYTE3ZTg2ZTljMDYyYjgxZTE2OTFmIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4OTVlNGU5NjU4MDg3YzM3MTRkODA3NTg4MDUwNTgxYTc1MzcyMjFiYTVmNWEwY2YyZThjMTJhYzlkNDQ0YzE3IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkNTkxZDNmY2U5OTIzZjA2MWRiOTA1OGNlYjdhYzBjN2VhMTE2MDNiZGE3M2U3MTQwOWFkMTBlMmQ0YmE3OTM5In0"
+        },
+        {
+          "resource": "repo://tests/test_registry_lookbacks.py#L234-L280",
+          "version": "repo-lines-v1:sha256:5bce3afb0407f7be604289f78721a5fede56d549ccb760aaeba22e9465d79b72:eyJzZWxlY3RlZExpbmVDb3VudCI6NDcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFiN2E4NmZkMTQxMjEyMDI4YmM1MWFlZmQ4N2QxNzJmMDIzMzZlZTExYzdjNzQ1M2JmMDg0MzRmNzg3NGE2YjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5YjkzZjQ5MmYyMTEzNTU5MDlhN2JkZWM3NGVkNTdmZmVkOWFiYTI3ZGI2MmJiMzU3ZGNjYjk1M2JiMjMxZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlZTI1NGE4YWJkOTUwNjU2ZGU1NDkwZWRkYmM1Y2NjMmQyZDA2ZDNhMjcwOWNkOWM3NmQ5YWEwZDNmZjBiMDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8bd0eb0a54b490f8157750eab51baf7",
+      "statement": "compute_features dispatches required callable parameters whose names appear in COLUMN_ARG_MAP as input-column names, merges metadata defaults with request overrides, and requires any other non-defaulted required argument to be configured.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L570-L641",
+          "version": "repo-lines-v1:sha256:42f5ffe54a82444abe7a7afc08fad69eadecd875f8fabdef0f5c46cc009e6519:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0ZDg5OTY5ZTQ1Y2Q4OTFiODZiMWQ0MGE4ZTZiNmYyYjg5MDJmMjk1MWM5NDU1NTQ5YmQ4NjcyMTRhZmRmYTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1YjBkZWFkNDE5NWE1MjI3ODVkMTYzNmI3MjY4YjkzZWMyNTI0MDRhMTcyNzc5ODRhOGEwYjNlMjA5NzJiNmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwZGMyMTIwZjJiODllZTQyNWVhZmEwYjEyOGFkMTJhZTNhNWE5YzE3NzI5ZGUxNmFhOWIzZjU3OTFkYjcyNzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkNGJjZDM0MTA3MWFlODBlMDMzZTdhOTE3MWE5NzI1MTk4MDkxOTgyN2UwYWUxYzQ1ZDBiYjI2YTVhMjNiYzkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/dispatch.py#L1-L22",
+          "version": "repo-lines-v1:sha256:22d516bb12abe0717e6989530d277bbfbe352b3623c9557f4552f4c7ce9a8a29:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2YmYzZWQyMDRmYTVlOGRjZTIyMjdmNzQ0NzRhOTZkODFlZGI4OWI5OWQ2ZDNkOWVkYzJiYzJhYjRkMDhjMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4ZTUyYzA5MjlmOGViODYzMzQzYTcyZDIyOGVjZjA0YjUwYTc4MWM0NjczNDM4ZjViMWRmNWI4YWFkMzk4MzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0b1f473f840d4a05a71e26a1417cf84f",
+      "statement": "Registry execution accepts Polars expression outputs, including multi-output dictionaries or sequences, applies each expression over resolved asset groups, and appends expressions with with_columns so eager or lazy input type is preserved while output collisions are rejected.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L643-L708",
+          "version": "repo-lines-v1:sha256:32b8a30e5e063f3a2c46cf0a36195dca5d740a536d7795da1e457d8732974307:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExNmMyYzg4ZTI1NzY1NWExMzJhZjUzOTQ0MGMyN2ZkOGU3YmM5YjU0NTYyYWJkNTVmNjI4NjY5MTllZGJjZTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQxZjZiM2E2YTk0YjUwMTNhNmM1YjU1NmI2M2U3ZGNmYmJkOGU0Zjc0ZDhmOWE2ODM0ZGNhZDQyMDc4ZDgxODAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_all_features_integration.py#L105-L148",
+          "version": "repo-lines-v1:sha256:7991ae00dcd367932d7002be254a0036b779e1b7ab1d6b378b82f36ec0001271:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlMTFhYjFlMDVjNmZmYmY5MzY5ZWIxODA0ZmY3MGRkNGVkOTJlZWMzN2RkN2E4MTU1Yjc3MDg5ODAwNmRiMmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzNDNjY2NiOTJiMGM3OWNiZDM0YmY0MGJmYWM4YjJiYmQ1MDQ0NTlhMjA5MDU4M2E0YzUzOGY0NTc2MzZhYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5MmNjYmMyNjY0ZWU4NWFjODU5MjlhMjMxZDBhZTc2NTIyNjA0NzU4YTEzNDBiMjU1NTk5OTA3NDI3ZDA0ZWYifQ"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L88-L101",
+          "version": "repo-lines-v1:sha256:ffe9e9f4c3d256bd3184941196889db4d5e7cd4d9723e4c44e26f4fd34b28511:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1MzFhZTc2ZmY2YTY4ODZiNmIzNjRkYjRmMmExZDU2NTQ5NWY1NzNlOTE3N2E1OGFmNzhkYmE2OTljYzIyYmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxMWIxZDIxMGRkOTBiYzBhZTgyMzU2ZTMzMTRlZWNmYzQ5MjhmOTc4YzljNDU0NGFiNGM0MmY4ZjJhNGE0Y2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdhZGY0ZDYzMzNhNDQ2ODFlYjkxY2Q2NWU0NWRjNjkyMmQ2NmE5MTk2NjdkYzVkOGE5MDdjNTQ4MDNjN2EwNjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f8708e0ed0ca45029e318bc2ea2cb2f9",
+      "statement": "Feature dependencies order only features already present in the request; requested dependency edges are topologically sorted and unresolved cycles fail, but dependency metadata does not automatically add omitted prerequisite features.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L512-L557",
+          "version": "repo-lines-v1:sha256:f65717f0c97243d9fc832859c0abbf6d11a4d476d160c4e8c9c91d1116804114:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE2Njk5MGZiNTkyZGMxMWI3OTQ0NGRiZDE4YjNiODRmNmQ4Y2U0NmU4Njg2Nzk2NTNjZGY2NzQ3Mzg0ZDI2NTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhMTFjMDU2N2QwYTVmOWU5YjEzNWY2NWNkMjUzNzJkZmQ2Mjg3NzVmN2MxZWQyNTNmOGJhZDQyZGQyZDY2NjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY1N2E0Mjc3MDNmZDQyYmM3YmQ3ZTg5Y2Y3OTY3ZjdlZTM5OTJmMWY2ODQyMWZiMmQ5ZjgxNTNiZmRlNzg5ZmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEwNjZmMTc4ODA2ZjlkOGViM2M4MmU5ZTk3ZWFlZjQwMDRjYWZmNjA4NTk4ODM2ZDlmZjhhNmUxNWNjODI5NGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_38160411fde942b4b6f355040b70bc37",
+      "statement": "Session and elapsed feature windows are supported only for sma, stddev, and realized_volatility; unsupported recursive and multi-window definitions are rejected instead of being converted to row counts, while supported temporal execution reuses finite row kernels over causal per-group windows without resampling.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/core/temporal_windows.py#L100-L159",
+          "version": "repo-lines-v1:sha256:1659a112f8691cce40a3bb2a8e8511c53989220b5011709df47a35af70d82917:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1OTU1N2FiZGI1NzNiNWIxMjBmMzBkZjJhNzQ1NWI1NjdhNzViMDllYzkxOTY0MWM1ZmNlODIyYzcwNGEyZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3NGQ1NWU4YjA5ZTMxMjZiZTJiZGJiZmZlYmJmMjI5ODE0YTRhZDg0MTJmNmRmNGRhYzM0N2U0MmM0NzA1YzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkYWY4ODA2OTBlYzNjZjM5ZmI0N2Q1YjY2MGI0Y2MwMWU5ZGEyZWY1YzgwYzAwZjExNGE5MDJhNzkxOWZjNGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/temporal_windows.py#L14-L45",
+          "version": "repo-lines-v1:sha256:72befe318989d68ab5ad7553f629bc9dcb6da27b0d6b74a4778a76278aca8233:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkNmNiNDA4NzU0MjhhY2QwYzA2YWY0YWI1YjM2MjY1MDY2NDFhYzliODBkZDQ2OTNjZWU4ZDNhMWRkZTljOGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiNDk5MTcwNTA4YmFkOGEwOGNmM2EwYjhmMWZlYzc1Y2ZiMzExZjFjMWJmMWI5M2RhOTk0ZjczMzdlZTU5M2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5NTMwODgwYmFlODgzOGQ0NDU2YmI4YmJjNjlmNjI5NTYwMmE0YjUxZDc4NmZiNGYzNmMyM2JlMmFkZjQ1ODYifQ"
+        },
+        {
+          "resource": "repo://tests/test_api_temporal_windows.py#L131-L203",
+          "version": "repo-lines-v1:sha256:902379e1b9572257e18fb7c8d3948f4ddb15cef257615594dac9fde91f939d6f:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0ZDM5MjViZjk4NzU3NzZjNDE2ZThmNzhmNDlhYjE3NGIyZDZkYjZhOTk3YTM1NTRmMjdlYzBmYjhjY2FlMTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3M2Y4MDM4NGNmNWQwOWI2MGZkYmVhMzNkZDBlOTQ2NGU0MTgyZDExY2E2ZjRkNjVkYjM4MTgzMGJjM2U3Y2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRmOTdkNjQ5NzUwZGJiZTZlZDUzZjM3OGZjYzk2NzVmZWUwYThlY2M1NjhjODJhMTBjNTIyMzllMDY0ZmY1MjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEzYWE3Y2UzZTE5MWNlZTdhZjViODc4ZGFmNGUxOGExN2U3NzMxOGU4YWVlOGViNjY2MTlhZGMxOGIxNzMwOTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_af787f78989841aab283da7ff6cf72f3",
+      "statement": "Feature registration is import-driven: category initializers import feature modules to trigger decorators, the aggregate features package imports all categories, and the top-level engineer package imports features before exposing compute_features.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/__init__.py#L15-L28",
+          "version": "repo-lines-v1:sha256:9de8ee49d94f4fa49a6ea7c20954eb12fc2c612d28ee822e632246b74fab13f3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmYTA3Nzg3MGE2YjYyODMwYjk4ZGNjOGIxOTdhMzhjMDRiOTkxNDYyNTk4ZGZkMzBjZTRlYzk3ZDY3ZWJjMDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkMTgwZmRkNjM4ZjVkMGYyMWIzNjc2ODJhNzU4MjNlMGExZGM0OGMxOWNlZTJhMDcxNTE2MGI2NmQ4MThjOGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlYmJkZTIxZDgyMzlmOTJiOGRkN2EzMzY3OWQxYmNmNmRjM2NlMWFkZDAzZDNmZTEwMzc1ZDZhMTU2N2FkNzMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/features/__init__.py#L27-L52",
+          "version": "repo-lines-v1:sha256:dca097559b665303d87741a9bd9de7bcd9cb14ecb82b5871f682ab5b32cec1a7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxNmI2YjkyZDM4NTY5NGQxODY0ZjRjNWFkYWJkODhmMjRkZTMwNzlhNzgzOTFlMDljNzVhMDI5YmNiMmY4ODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhY2YxNTY0OGE4NGE3Njc5MTAzNTgxZTc3MDNlYjQ5MzFhYzVjZTJjN2RhZTIwY2IwNzdiMDdiZWQ1ODJlMWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwMzI2Y2UwZjcwMDU3MzQ1NTMxZjhhNDNkODFhNjdlOTM4MWNmOGY4YWE3OTUzZTcwYTJiNGYzNGJkODZhZDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc2YzkyYjljZGM3MDFhNGYyNDMzYWYyNjIwYTE1ZmY1OGRkNmYxODc2MmZjYTAxNjVkNTU1MGVkYWY5NDZmNDAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/features/momentum/__init__.py#L1-L35",
+          "version": "repo-lines-v1:sha256:4b723a3035c120921fdad113a002b112b3717c0cd459e293e4654d64a6c53bf6:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEzMDNlY2RkNGE0ZDEwZjE5YzczZmQ0MmZkMTI0MzdmZDMzNTRhODI2ODE2MDVkYTUyNTVhOTdhMzkwNjhkYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0YjZkNTVkMzY2YzUyNWQ0YzRlMGNiZWU5MDc4NTcwNDkzOTdlMDgwMDE4MGIzY2E0YzNhOTc3YjE2ZjA3MTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_25decf02204541b58536c04fb891a438",
+      "statement": "Registry normalized metadata denotes scale-invariant, ML-ready output rather than proven statistical stationarity; the decorator warns when normalized output lacks a value range or when a bounded range is paired with normalized=False.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/core/decorators.py#L145-L200",
+          "version": "repo-lines-v1:sha256:c2ba3daffce81deb915c526e40368b759e5646b61de3850db0ed4980c1536eb3:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkOGE5ZTljMzI1MjgyMGM2NWE4MTY1MjBiOGRiNDkzMjI4MDg0OWVjOGM3ZDJlYjYyNzJhZmRmZWJlMDU5YzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFlNTZkMzY3YTQwYmU1YmE1OTRjMDNiNjM4YTQ3NjExZWVkMGVmM2RhNDE1ZDMyNGJkYWMzMGI1NjljM2M3MTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg0MjAxYjY2YjkzNTQwNzFmYzllNDlhNWYxNmJlZTc0NmVhNTMwYTIxMGIwMWFjMWQ0NGJkOGY5YTU3OWJlMWQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/registry.py#L28-L47",
+          "version": "repo-lines-v1:sha256:7b08858c87336527b81b589caf35d392cbe8f87bea9e1ebc5857b4618002b6ae:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2YTQxNjE4MjhiNWM4NTY1NWRmNjY2YTcwMjY5Yzc0YmQxMDZhOWUwNjIyNGQyODZhNzJkNzg1MzNiYjNkNjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwNzBmMDgyMjlkZGZiNTVkMzNlOWNkZmFlMDliYTE1MzQ0MWE1ZjUxMWM4MjBjNzc5NGVlMzQ1NDU1ZjcyOTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExMmE0N2QyYTg4MGQwMjgxNDkyODUzZWVmYTAzN2EyNzNlZWJmNzQ2YzA0OTQxNzU1YjBmMjkzNDk5MjRlYmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQyMzNkMTYzNDdjNzg5MzNlNzcwN2YwNWY4Yjk5NGU2YTFkZGI0NjA2OGU1ODc0Y2U4NTlkOGFmYTEyZDM4MjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b085b4c0fdc84a048f79e3ac85edfca9",
+      "statement": "The lookback contract suite requires exact name coverage between the registry and FEATURE_LOOKBACKS, verifies metadata defaults against function signatures, and compares declared default and configured lookbacks with the first usable compute_features outputs.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_registry_lookbacks.py#L217-L231",
+          "version": "repo-lines-v1:sha256:1323930d7a5a0eae0afe7dfb994bc0f03e70ce915060cb84b1c7075e87bdb8ea:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFmMzQ1ODNhNTk4NzY3YmY1NmFlZmViNjVlMjAzM2ExNjUxY2M0YzhkN2U2ZjBhZjNlNWNmZDMyOTNmOTMzYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA5ZjkzMDgzYzE5NzEyMWI5ODI3MDBiYThhZmFiZDE3MjJjZjFkM2U3NDA0NTA5ZTgwZWZhMjcyNDdmNjJmMDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjMDAzZDUwYjIxNjlkYjkwM2YxM2Q4NGViZmE4MGFjMDUyMGNjNTYyYTFhYjU4MjJhODk5YzJiY2MwY2FmYjEifQ"
+        },
+        {
+          "resource": "repo://tests/test_registry_lookbacks.py#L77-L112",
+          "version": "repo-lines-v1:sha256:6b96f39934ee8a717bd89d766b3f698d282f070930009380e6be2e31c03b9acc:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwMjViNmE2M2M4Y2Q0NWVmZDIxNjhiYzg3YjZhYmRhNzgzNWRjODM0ZmY0ZGY0MjNlZWIyMzI0N2U0ZWZiOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEzNTQzNmZkZGY5OWY5Yzg1ZTRjNGRlOTVlMGIzYmE2NWViZjExNjg5YzZlODQ2NTNkYmIwMDcxZjNjNDVkOWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY2NDQ3ZGZlMTE2NTBiYWM0MTRjOWI1OGNhZDA5OWQ1MzE1NTVhMjU3YjEyNzcwZjNkMmU0YjEwN2RkZjY3OTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae6c86fe0d404eaebd09086607588cc3",
+      "statement": "The whole-registry integration suite exercises every registered feature individually and together, verifies panel results equal independent per-asset execution, and checks metadata completeness.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_all_features_integration.py#L105-L148",
+          "version": "repo-lines-v1:sha256:7991ae00dcd367932d7002be254a0036b779e1b7ab1d6b378b82f36ec0001271:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlMTFhYjFlMDVjNmZmYmY5MzY5ZWIxODA0ZmY3MGRkNGVkOTJlZWMzN2RkN2E4MTU1Yjc3MDg5ODAwNmRiMmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzNDNjY2NiOTJiMGM3OWNiZDM0YmY0MGJmYWM4YjJiYmQ1MDQ0NTlhMjA5MDU4M2E0YzUzOGY0NTc2MzZhYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5MmNjYmMyNjY0ZWU4NWFjODU5MjlhMjMxZDBhZTc2NTIyNjA0NzU4YTEzNDBiMjU1NTk5OTA3NDI3ZDA0ZWYifQ"
+        },
+        {
+          "resource": "repo://tests/test_all_features_integration.py#L227-L252",
+          "version": "repo-lines-v1:sha256:b4a0c3f78b8b6e28982bd59e0a5686ed18693eeddb792c3fb5e8197258c577f5:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJkODk0N2MzZWU4ZjY5NmVlMThmZmRlY2MxNWY4YTNiMjY4Yzc2ODE5NDFjNzY1ZTEwNjFhMWEwYzZkYzdjM2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5M2ZjOTc4OTQxNDA2MjMwOTZjYTlkYjcxNTQ0MjJkNDA0NGNkZGJmYzk1YWQ0MGRhYTc4NWY5YjkzNDJjZmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1YjM0Zjk3M2U4M2Q1OWE2ZTQzYzIwMGQ2NzVlY2Y1MTQ0NDM2MTdlNDE5ODI3ZWE4NmVkMmY0MDVmNDhmMWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgxYTY0ZDc3NjU0NDA3ZTZmOTc5N2RkOGMzZGFhNWVhZTI2Y2EyMzk3M2U5MjY4ZWRlY2RjODhjZmU5Y2Y0NzgifQ"
+        },
+        {
+          "resource": "repo://tests/test_all_features_integration.py#L41-L103",
+          "version": "repo-lines-v1:sha256:0586536e7759740743d49a1a5990eb1c8b05734157ee6bd93c495e60045f9078:eyJzZWxlY3RlZExpbmVDb3VudCI6NjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4NTQ3ZmU5YzBkYWYxYjNmOGVjMDE3ZDY1OTE3MjRiOGYyNmE4YjNjZGE5MTk0ZGEwMjQ3ZjM0NjZjZjBiMDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2ZTljNTQwMTBkZmY5MzVlZmM0NTU1YTM1NmY5M2U1YjM4NjkxMTZlNTkxMGVmMjFjN2QyNzA3ZjgzYjFmYmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk2MTZlZmE1ODhkZTY5OWQxNTY0ZTMzNDA1NzhlNThjZTMxMTQzODZjODQzNzU0Njc4MzlhNDFiYjNhZDcwNmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhjZTEzYjRkZWMxYzViNDBmZDczN2U3MmZhYmQ5NDcxYjFjOGRiYTY1ODQ4ZjNiNGQyMjViZWIzNzA0MGY3YmMifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:41.957Z"
+  }
+}

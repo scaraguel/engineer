@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:eded5268b2684b56500d7ba150da0e7335dea2afe991b8587caf9b1ee997fe33",
+  "claims": [
+    {
+      "id": "claim_397baf428bbf4d1eb200edb782b43415",
+      "statement": "Dataset assembly is positional: callers must derive selected feature columns, labels, and dates from the same aligned rows, while MLDatasetBuilder enforces equal lengths but does not perform feature-label joins or upstream null filtering.",
+      "evidence": [
+        {
+          "resource": "repo://examples/complete_workflow_example.py#L55-L83",
+          "version": "repo-lines-v1:sha256:1f7226064b083e7b9141404caf2b259561e2eae7fd25abbf59f5b25e500f6b1c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZTNkNzQxYzQ2YjIyNzRhNmQ0NGJhNjJjNDY0MmIzNzc1Y2U1NjI4M2FkNGE4OWE1ZWIzMTBkZWMyMTJhNGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0ZGJjMjFkOGM5MTkxZWRkNmJmM2IwOTkxZTFhZWIzZTBjM2MxYjI2Nzc2MTBlODYyOTFhN2I5NTM5ZDg1ODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlY2EzN2ZmNjk2N2ZiYjhkMmUyMTc2ZmM1NmM5ZTJkMDIzODMzYjQ4ZjE1NjJiMGM1Yzk0NmZmZjYyMzYyMzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc3NWRiNjEyYmRkNDQ1MDIwZTVkZmExZjkyOTBhM2E2NzM3NzMxMjJhMTQzM2FhMjZlMmI5MzQ1YTRjYTg4ODQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L174-L264",
+          "version": "repo-lines-v1:sha256:be455603b5164e23fe1dbf4dc63754eb415cb815c6e375d71a9b3f0d19b3d1da:eyJzZWxlY3RlZExpbmVDb3VudCI6OTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5ODcxMjFmMWVkNDFlNDExOTg4NGI4ZjdiMGE3OWM3ODMzYmE0NDNhZGQyNzYyZjc4Yzk1MDE0MjRlZWY3M2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxYjQ3ODFhNWQ1YTAyOTZlNTU3OTQ3NjQ1ZDI1ZDE0ZWJmNTMzYWY2ZWMxY2I1YTU5MzIyZDk3ZTE2ZGIwZDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcwMDA1NGMxZmY0MWEwOGY2NDMwOWFhOTgyOGRkNTJmZjEyMDYxNjBjYmU2YmU0MjhmYjc4YmJjMjM2M2ExMGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiOTYwN2M3N2VlY2U1YmE5ZjEwOTVjNTIwZDEwNWRmMWMyNWMyZmE0YzcwYzMzYWM3N2EzMDc1ZjEyNGY5MmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b0dee2db332c421091698a244625e34e",
+      "statement": "When dates are supplied, MLDatasetBuilder requires a non-null, nondecreasing Polars Date or Datetime series aligned to the feature rows.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L236-L284",
+          "version": "repo-lines-v1:sha256:8b84c8009b2208ecba66abb374a2d4deb38357ed75009328f8692e5c8bd61062:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyYWJlZjcxODk5OWU4NDkxYmJkMGEzYTEyYTUzYTc5NGU0NDRhNGFmMjg1OWRmMjk3YTZkMWQwNWM3NmRhNDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyZGE1ZjJlM2Y0ODA4OWU0ZTZjYjgxYzI1MmYyMzgzNDUwYzBlNWQwMDhiY2IwZTc1NzE5N2E0NjYzZDA2YTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcxMGM0YjAwZTdkMzVmNjBjNTBmMmEyM2Y1NzhkMzI1ZjVmMjNjNWU2NzM0ZDlmY2EwMWUxYTA3ZGM0NDJjYzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0ZWJjYjIyNGRmN2ViYTcxNTNkY2U2YjQwMjI3MWUxOWFiZTdlMjE0MDY2NTg2ZWQ5MWExMDk1MjM1ZDYxMjYifQ"
+        },
+        {
+          "resource": "repo://tests/test_dataset.py#L176-L229",
+          "version": "repo-lines-v1:sha256:a116633b00a0a80d74059c54c3ab92b961d23538ff11c403944a60d2cf090dc6:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0NGI5NWMwZDRlNDFhZWY4NTRkZDM1YTQ1OGJmNDg4MjYxY2NlYWQ1ZGM3MmViNGNkOWUzYzk5NGY5MDMyODgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmOWM4YThhYzMyZTk3NTlkMTc5NDNmMDBkNzQyODkyMjZlYmYxODhhNzhjYjY3OWMwODQzMDhjODA0MGYxYmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZmMTczYmQ1ZjRkZDAzZjNiMGI1ZjZjYzRiYjg1Nzc3OTNjNGJlMGU5NDgyZjUwMWI3ZTNlZjlkMzMwMjU5NTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZiNDYzZTAxNTE5MzZjZDFlYWQ3Y2QyZTQ1YmFlYjk0ZjQ2ZmY4YjU1OTQzNjMyZWRmMWQ1OGI0NzQ5YjVhNTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b1a677f8a0de4dec9ef2b9c1c00a5abd",
+      "statement": "The manual train/test path forbids shuffling dated data and moves the requested row boundary to a timestamp-group boundary, failing when no distinct timestamp boundary exists, so equal timestamps are never split across partitions.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L286-L301",
+          "version": "repo-lines-v1:sha256:8181ca457fb433624913fffa556bebff415d6f497a8e4a0881688df436e66c16:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyMzQxOTc0MDVlYmI5ODczOGQ1YzZiMTljNmRmMDUxNWY1MGJmZjIwYjBlY2I1OTY4NjlmMGQ5M2ZjNDI1MGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YThlNDMyOWU0MTAxYjRiNDljNmQyZjg3MzI2Mjc0OTY0NTdiMzY1NTRkNDFkYTI2ZjI1MGVjM2NhOGIwZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4MDA5ZjhlMGEyMmQ5ZTgyYzA0NzllZjBkYjE1NTdkZmQyZWY5NDNjNmIxNTY5ZWQwMjYzMTBiYzE4M2MzYTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA3YWE1ZTBhNmFhMGM4MDkyOGZlOWUwNWQzZTg4OGI5MjU3YmY0YjA4MmQ0MTg5ZDAzY2YzZGZiYmRmOTE5YTIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L501-L579",
+          "version": "repo-lines-v1:sha256:a4a84efb2385f2eb4ef37a9d827201b7bbeb80cdf9b46acb93da53f5c8c6deb7:eyJzZWxlY3RlZExpbmVDb3VudCI6NzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxNDVmMzE2MWYyNDRhYjk3MWFjZTMwNmVjNWMyMGM5ZTZlZDMyY2FjY2Q4YmEyMTdlMDE2OGU2ZWI0YWVjNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhNzg5NmJhNDcyNzRmODc3YWEyZWFmMWM5Nzc1ZjJmNzZkZTgyZTVlNzc2NTQ1YzY3ZTU1MjJkMjcyNjA2YWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAzNWI2MzA0ZWU5ODM2YWEwYzAwMzBhNjk1N2RmOWMyZTk0NDE4NjhjNjRmOWM5YjlhMzQ0ZjdmMDFiMWYzNTAifQ"
+        },
+        {
+          "resource": "repo://tests/test_dataset.py#L390-L449",
+          "version": "repo-lines-v1:sha256:fc0045bfd6ef9132debce556574c9741d542e988126edd5da53f70f2254a9c81:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzZWEyOTliM2UzOWJlMjNmYzAxNjg3ZGE2NTdhZjc2MTY4Y2I2MGViNjU5Y2UyNGJlYjgwODAzY2I3Nzc4Y2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2NDMwNzllZGVhMTk5ODc3ODA2ZWFhMGVjMzAyN2YxOTgyMTZjZTY4ODQ5NTI5M2I2MWMwMmY0ZDkyNTczYjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyYzJhMGNhNGI5YWE2YjRlZWZkNTM2MDlkMjliZDFkMmYyOTIyMWEzYjczMGUzM2VmNWM3YjEzN2QzMGUxNmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3ZGJiZTNmNWU2MjFhYTMwN2JmZmYwNWI0OGUyMDI2YzFiYmJjOWE1YWIzNzMwMTg5Y2M0MGJjNDI5YjhhMTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_271a7e83e1d74e9ba3612589cceb114c",
+      "statement": "External cross-validation policy remains owned by the supplied splitter, but MLDatasetBuilder validates every yielded partition for one-dimensional nonempty integer positions, uniqueness, bounds, train/test disjointness, and—when dates exist—a strict training-before-test date boundary.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L286-L343",
+          "version": "repo-lines-v1:sha256:fc40545b162d722d8f473d5e4d523ee1afe55f58e08140a27c65bfda530ea2ab:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyMzQxOTc0MDVlYmI5ODczOGQ1YzZiMTljNmRmMDUxNWY1MGJmZjIwYjBlY2I1OTY4NjlmMGQ5M2ZjNDI1MGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MzBkZjJhNzNjYmQ4ODQ2Mjc1OTI2ODI3NjU5NWM5Y2E0OGFjYjFmMDZiNzYwODlhYWExZjkwYjJmZDhlYjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI4MDA5ZjhlMGEyMmQ5ZTgyYzA0NzllZjBkYjE1NTdkZmQyZWY5NDNjNmIxNTY5ZWQwMjYzMTBiYzE4M2MzYTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkY2NiMDNhZThiOGFlZjMwMDNhMTIxZTRmNzA3NzFkOGI2YWI2YzY4Yjg2NDcxNTE5YjNmZWU4ZmRkZmM3ODQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L388-L500",
+          "version": "repo-lines-v1:sha256:73dfeff1b0f4832e45b9d4fec731e6bf2ed3366cb30c6087f8692fc2788df0bc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhN2ExYjlkZGJjNTAwYzA4YmNlZGJkMDhmNGFhNGU5NTEzYjI3ZTVjMDRkMzdhY2EyMGYyZDIxNzJmNmNiMGU3IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI1NTAzMmU5NjRkMDkzMjM1MWU1ZDE4NTI2OTI4MWIxNzFhM2EwOWIwOGIyODZlNjYxZWE0NzAzMjNjODJlYjRkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIwNjdhNDg1NDQ4ZjcxZDg2ODM2NWI5YTQyYmY3ZmE3NmM5MzI2ODJmYTM0NDUyYmFlNzUzYzZhNWEzODE5YTIyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIzNDI1MzYyMGU0ZDIyMzJjYmMwYmVjYzJkZWNiNjQzYjhjMmIxZmUwMGIwZDg1Y2RlMzE3NGYwNmYyMzUyMjJmIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L67-L79",
+          "version": "repo-lines-v1:sha256:e7f656ea805a9d40ff181b8fb823f546ffb5505d4eb0295ba7584869504ce0e9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyNzhlOTg5ZWU4NGZmNDljMDVmNmMxNDNiNzQ4ZjFhNjllOTUxM2NiNzdjN2U0ZTU4YzFlZmJhMzdkODA4OTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2YTcxNTI1NzJlZTg0ZjEwOTA2Yzc0YjlmMmE5MjQzNGRkYWIwZTNjNDI4MTNiMDRlNTk3ZWZjZWM5NTFiMjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5MzVkYmFmNWM5OTM5M2JkNWRlODlmNjU1Y2M4ZjQxMzljYjkzMzIzYWMzZjYyODAxYjM0OGFhOTE1YmM3MmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5ODRjNDVmYjE2MDJhZGMzMGE4ZTI1NDBhMTRiYzk1YWIyYjRkZmVlMzJhNzljOGE2ODljZjg5OGMzN2EwM2QifQ"
+        },
+        {
+          "resource": "repo://tests/test_dataset.py#L513-L574",
+          "version": "repo-lines-v1:sha256:1afb0dfff76cbbdbdbd594202f46116427fd8411a065373fb2d1b6c6f4ba3a22:eyJzZWxlY3RlZExpbmVDb3VudCI6NjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiMjk3ZGU3ZGVlNjc2ZGY3N2ZiOWM4NjZhNjY0N2Y0YjRhOWVmYjU0ODdjMjM5ZTkyYWEwMDRmZDAwNzBlNGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2OTNiZjc3MGM0MDFhNWMzYmU3MzRlMWUxOTg4Mjg4MmIzMjRhNjlhNGQxMzdmMTljYTljMjliNTZiODRkN2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwYjM1YzQwZjYyOTE5ZmMyNDk4MGM1ZWEyYmQ4NGJlMThmZGRjZWFmMTAzNGJkZThjY2FiNDZiZjc2NDM0YTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkMWZjODQ4YWMwNDAwOWU2NDM1NDAwNmU4NDk5OTRkMmY3YTRiMDE1MjFlM2M0NmJjNTA2YmYwNTViOGU5MjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c2d1f7ae915140c98d0582fe4ac02e82",
+      "statement": "For every cross-validation fold, MLDatasetBuilder slices features and labels with the validated indices, clones the scaler template into an unfitted instance, fits that clone only on training features, transforms both partitions with it, and exposes the fitted clone in FoldResult.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L444-L500",
+          "version": "repo-lines-v1:sha256:9030e429a858e6a33f6babd4ea406e23498af68cdf8e9f41e6273e9cf83bbb7e:eyJzZWxlY3RlZExpbmVDb3VudCI6NTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzYTc2OGFjY2U5MDhhNDljZjFkMmM5NmI1YzRlMTA3YWI5MDMzNTU2MGRjOTNiN2M4N2NlYmY2ZDQ3MDdlNmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiYmFiOGVmYTQ1ZDBmOWZjMzAwNzYzOTFmMTUzNDJiNDg1OTE5YzllODBiYWJlMTQ5NGVkN2ViOWI5ZTFjY2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0MjUzNjIwZTRkMjIzMmNiYzBiZWNjMmRlY2I2NDNiOGMyYjFmZTAwYjBkODVjZGUzMTc0ZjA2ZjIzNTIyMmYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/preprocessing.py#L223-L238",
+          "version": "repo-lines-v1:sha256:97c725936cd9aa0ae9a0b6894965b9148c012e760fb6636963c910f22b3deb68:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAzY2UyZmM5ZThkZjk0Y2UzYjJlZjYwZjM2MjI0NmM3NzEzOTVjMjQ1ZTQyZDFhZTcyMGZmOWE4NzM0NzZiZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ4MGQ1ZGU5NjQwOWFkMTU3ODMxOGI0MGEyNzAzNTYzMmQwYWRlNzBhYzVmNDJkY2E0ZWZiYjZjZmE0NTJlNDcifQ"
+        },
+        {
+          "resource": "repo://tests/test_dataset.py#L480-L507",
+          "version": "repo-lines-v1:sha256:81eed99b0d607e7be7b7e9ae314151288f7febac967dadcffb41b31ff6f675b9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3MzZkNGQ1M2MwM2Q0MWY3ZWM0YTBiYWY3YzdmMzRjY2Y2Yzc2YmM0MzVkMWZiNzQyY2RjZjA3MzEzYjliYjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjZDA0MjUxNmFkMjcwMWM5OTYyMjBlM2ZmMzgyNDQ5M2NiYjRlZmFmYjczOWZjMGEyOTNiY2RiZTYwYzcxMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk1NWI2NjZlZjY2YWY2NzU4OGE3ZWI3MWEyOTdhMzc1YzY2OGIyNzBhZDhmNWU5MGE2OGZkMmNhNTNlOTA4ZDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFjMTJkZjBlZDc1NGFiNmViYjUyZWEwNTFkNTk0OWIzOTllMTg5YWIxODI2YjNlMDIzYzJlZTBiZTg4MDUwZGIifQ"
+        },
+        {
+          "resource": "repo://tests/test_dataset.py#L755-L808",
+          "version": "repo-lines-v1:sha256:40aaa24f4334b97f5c06ae0deb10b5a7f615987fdda49f7921b151bb4f634247:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YThlNDMyOWU0MTAxYjRiNDljNmQyZjg3MzI2Mjc0OTY0NTdiMzY1NTRkNDFkYTI2ZjI1MGVjM2NhOGIwZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5OTg4N2RlYTI2MTE1NDE4MmE2YmFiMjU4ZjRiNDhmOWNiMzIxZTMxMTViMTlkODhiNjFjMDNkZmUwMjNkNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzNDE1YzI4YjM0Mzk5ZTNhNWZlMjE3YjVmZTNmNzM1Y2Y3M2EyZDYwNDJmNzhmMGUwOTBkYjk0NDc1ZTg0YWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjIxNzQ0Yzk4Zjc4OTlmZmNkMjY1N2Y1NWFkNmU1OWM1MWFmMDQ5ODU2M2E3MzE4Zjk5Y2VhNDVlYWMxNTQyZTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_56671b7498824c75a09708586cbb970d",
+      "statement": "The manual train_test_split path fits the builder's scaler instance directly on training rows and reuses it for test transformation, whereas the cross-validation path clones per fold; therefore repeated manual splits refit the builder-owned scaler state.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L467-L479",
+          "version": "repo-lines-v1:sha256:97798add1bd77e5f70b7c78ea94147cdffa7e96e414e4dce67ffa093ae5f25fa:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwZjk3YzNmOGVlMDlkZDNhNGJhZDFlN2NlZmRkOTc0ZGE2YTg2MDVhOGVkMTE4MzJlNTQzYmQ0NzQ4YTY0YmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1Zjc2MGZlNjFlMjVhYjkzOGJjZWQ3MjFlMGIzYjA1ZjRhNmFiMDZhYzNkNmNiNjQxNWFkZDQ1OTgxNjM2NWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQzMjZmMDY0NzRiNjQ2ZGE3YjY1ZTU4MjgzMWJhYTlkM2U5YzBiNmFmMjdkNzg3MDc5OGM4NDIzZTJiOTc4NmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU1NDQyNzExMzYzZDgyNDNlNmQ2M2VkYTVmMzkzOTk0ODA3YzA1ZjQ5OGJiMTVkZmRjZjljM2Q0NDk1YjkxNTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L574-L592",
+          "version": "repo-lines-v1:sha256:be7c4301ea939f95335f7e7c723f8f78927c314df06c20d121a20f93209dd671:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3MjY5MzU2ZDJjODYwYmQ4MWY2ZDdmNDA1MmEyZjExZWY1NzZiNGY4MmFkNTgwZThlMmE1Y2ViMDg3MDFhOGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFmYzNmMWU0NmJmZmIwYTRjYjUzMzVlYzk5ZTFlZmNjM2U4MzhlNzYwZTI4MTg3ZjM4YmNlMTM2MTRlZGZjNzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBhNzljY2YwZDI3ZGFlYmE1MjU3OGRhODA1YmIxZGJkNTJkNTYwM2I1NTBiNzMyZmU3YjMwOWNiZTEyM2M2MGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY1OWE5ZjI4ZGRlMWIzY2IzNmEzYjhmOWU4MmE1YTJmNTZhNTVhNGNjMTRhY2ZkMTIyMTljNzMzMTc0ZDBjZDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_650a583bc8194ca29d32d6bc21e20cac",
+      "statement": "BaseScaler implementations learn only selected columns (or all numeric columns by default), preserve other columns, require fitted state and fitted-column presence for transformation, allow null propagation, and reject NaN or infinite values during fitting and transformation.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/preprocessing.py#L98-L222",
+          "version": "repo-lines-v1:sha256:c4701acff85bb9e7197bfe1b7ae21f88ec807fdb675a36965ef61dbaad35fe92:eyJzZWxlY3RlZExpbmVDb3VudCI6MTI1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwM2I5YzExMWY1YjZkMDEyOTVhMjc2Y2U1NTAxODVjODFmZDQzYjMyMTE2NzM3ZDVkNzAwZjBjOTJmZDIwZDQ2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3YmIyYTMyNGUzZWIyMzU3NWI3MmM3OTI1ZmUwMDJjY2ZlMmFlZjE0ZmUyYjZmMjlkYjBiNjNlNjNhODBiNmFlIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4ZjgwY2Q5ZDE0Nzg5OTg5ODExZjcyOWI3MmFjYjFlMGVjODkzZjA5ZDdlYjVkNjIyMjVlMjI4YzQ4NjNhMTJmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlYzIzYmQxZDRmZGUxOGViNDJiYTQxODBlOGVlYmY3ZmMxNDM3M2E1MjczZjExNjYyN2Q2OTEzMjMzNmZkMWUzIn0"
+        },
+        {
+          "resource": "repo://tests/test_preprocessing.py#L116-L170",
+          "version": "repo-lines-v1:sha256:97083ce7d776d50ef725ae0362c810a5d442eedac5c914b009fa414d349bf46c:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMzMzI4NzQ5NTE4OTEyOTc3MGE3Yzk0MWEyNzNmNTBjYjhkNmY2NDY1YmJhNTkwY2RmZTk3ZGRhOTg3NjZkYTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRmODZjMWFhOWJiNTQxMDcxOGViYTBlOWUzNGI2YjVkYTc4ZDQ5MjcwMWNhMWIxNjUwNzNlZTdiMjZiZjk5ZTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM3YmY4MjQ5ZDBhZTdmZTkxMmZhNzFhN2ZhNDA1NTA1MGRjNTU1NWRhZDE5NjA2NGQ0NDcyNDM3ZjYwZjUwNmYifQ"
+        },
+        {
+          "resource": "repo://tests/test_preprocessing.py#L801-L844",
+          "version": "repo-lines-v1:sha256:c97938757e6c85c596826bb33dee0ec2ac8b3dbee6da9db42434f7be86b61786:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkOGQ5ZGJjNDY4NTBiMzIxZWRhYmQ4ZmE2NmQxYWIxMzFjYjc4MWQ3MTA3OWQ5ZDVlZDY1OWY1Y2NjNDE4NWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NjYzMDc3MTEwNTg0NmJlYjE5MDcxMmM5OTBhY2U3NGExOTE4MDcxM2RmNDUwYmVjZThlMTM5YWZjYTAyMWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhNjI4MThmNDg4MDNjYjk0MGY4YzYyMjg4YjAxYmY3Njk2ZGUwYTk1ZjJhMTc4YTZkYzQyYjdmYjFhYTU5NDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjliMWU4YjNiN2VlNWFiNDMzN2U4NGY4MDEzNmY5NTNiMDE3Y2RkOTg1Y2FjZGRjNDYxZDkyZTQyYjM4NjkxNTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_068dc54515c849aeaf3255dfa5745c2b",
+      "statement": "PreprocessingConfig is a serializable factory for standard, min-max, robust, or disabled scaling, and MLDatasetBuilder accepts either that config, a BaseScaler instance, or None while create_dataset_builder additionally resolves supported scaler strings and defaults to standard scaling.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/config/preprocessing_config.py#L256-L308",
+          "version": "repo-lines-v1:sha256:80322ef097c6c62bcfdbde5825d17bcef67660a15cd40e4366584b9910d105fc:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5NGZhMDYzMzNhNWQ1NDNiZTkyOTlhNmNjMWIyNjkyOWU3MGQxNWU1MWQ5ZjlkNmJhOThjMTg0NjI2ZjkzYWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0M2QwNGIyZDkyMGFkNzMxNjgzMzRiZWFlNjc5MWE2YjE1ODc5ZjQ4MWExYzc4ODU4ZDVjYjdkYWYzNjBmNjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0MmY1ZjE1ZWI1ZTBhMzFkOWVlMDg5MGY4MjkwNjAwYzExMWMxYTBjYjFjMTRmYTg0MDYxNjQ5NjcxZjNjNzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE1NjRjZjc3MzYxZmQ5MzQ0YTg0NGYzMDA1NTI3Mjk4NWRiOTZlYTAwNWQ1MjEyYjYyNjg1M2E5ZWQzYTFkOGIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/config/preprocessing_config.py#L30-L113",
+          "version": "repo-lines-v1:sha256:b54f4d3bdf09d5298ddb076d00c37604b5f3e27437039a371dde9d1a33b3c0e6:eyJzZWxlY3RlZExpbmVDb3VudCI6ODQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViM2ZhYzIyMjRjYzM3ZjE2YTMxODNkN2E3M2FjNTQxOGQwMGVhYjZhYjNkZWYwYTQ0OWRhZjc3NDE4YjA0MzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmNGU1ZWFjZTU2MDczNzM3OWY1OGQxNWUwNjk4ZTExODYyNzFmZWMyZmE1MDNmMjFhMmMwZjgyZTExY2M3NDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA1YjFkNzdmMGUzZGI2ZmQxMjU2ZDUxNTI5NGZkY2ZkOTg2ZjFkYWM1NzI3NmM3YzU5ZTA1OTAxNTRhM2VmMjMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L345-L386",
+          "version": "repo-lines-v1:sha256:13b5df3893fcd374247da7f3686c660fd98d4f28466451309aad2f2b901c4eef:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNjZjcwZmRmM2IyZjZmMzg1M2ZmYTY0N2MzOTFjNDY3MmE5NDhjYzVmZjViNDFjYTYzNjBlMTA4Y2M5MWM4OWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgzNDY3MjE1YjU4YzU5NjQ5MjcyMzg5ZjVmNjFlODg5YmZmZDVhYmFjOWQwNGI5NTc5ODk2OThjOTFiMDlhNmEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L720-L778",
+          "version": "repo-lines-v1:sha256:7852a322e11ab2644b3876852bda6a23d0c519df5a1adeb65c4a4f840d687fa6:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlNTdiMWM4Y2FjYzgyZGQwZGRiMGYyZWJkMDg5MTlkNjgzZTdkZTdlZmRlMjZmYzc1NzE3NjUwZDg0M2YxMTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ4NDFhMmY1NjExZTY0ODQ0OTg1NmJlNTM3YTBjYzMxMjA5YTljNWMyNzBkYTc1YTQxY2Q2ZWU4ZTUyZDdiN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1223d2579dff479d8c2e94840674446c",
+      "statement": "Scaler persistence includes schema version, concrete class, constructor configuration, fitted columns, and learned statistics, and deserialization rejects incompatible or malformed payloads instead of silently defaulting them.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/preprocessing.py#L240-L326",
+          "version": "repo-lines-v1:sha256:11ffdb6c2953990437e8c09b7408767989dc5303b7c3fe46a0e7598ba97518b2:eyJzZWxlY3RlZExpbmVDb3VudCI6ODcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3YTFiOWRkYmM1MDBjMDhiY2VkYmQwOGY0YWE0ZTk1MTNiMjdlNWMwNGQzN2FjYTIwZjJkMjE3MmY2Y2IwZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRjNWRhZWExNzdmYTQ0YWU2MDQxNjM5MWJiYWUzNmVlYjRhOTU1YjZiY2MyMTczZDI1OGYxZmMxNWFkMDE2NTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQxYjBjMGE0Y2IxMTY1Y2QxNjQ2YzdkYjk5Y2M2ZjhkZmRjMGQyYWFlMjBkNzVjZDk4MTllMGVlM2I5ZmNkOTIifQ"
+        },
+        {
+          "resource": "repo://tests/test_preprocessing.py#L323-L461",
+          "version": "repo-lines-v1:sha256:51623402751f95de5320f78defc81245d719e0ea82dda8811d603f6f8965991d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTM5LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyMjY0YTBiMzY0OTliYWE0OWY3NDFjZWM1ZDQxNjE3ZGViOGIyZTUwMTgyZmY1OTAzNDY3MDlmNTEwYTQwNDQxIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI1YjQ5MjNmN2VkMTAzNjIwMzM1M2FkYzVkMTgyN2FjZDU5MDhiNDVhNTE2NjI3NzJlMzA3YmI3ODU3MmIwNDEyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0NzYzNzM2ZDgwMWM4N2M2ZTRlMDU2ODljMzhjY2VlMmY5MTkxM2Y3ZTJiMmEzYWYzN2E4MTRiM2JjOGRiODZkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI2N2VhZGJjMzVhYzllMTI3ZTFmMDk3ZmEwNTYyM2ViZmNkMDUzMGFjMGM5NjBiMTcwYWViM2MyNWM4OGI5NjM5In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b79a50631fc464a8c2154cfa754c92a",
+      "statement": "PreprocessingPipeline is a separate recommendation-driven transformer rather than a BaseScaler; it fits per-feature transform state on training data, carries the last training value across the boundary for first test differencing, and validates fitted features and serialized state.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/preprocessing.py#L1001-L1113",
+          "version": "repo-lines-v1:sha256:1665ba5041cf3f5e3cd5b0b71c40d5bad0a6490bd84de70cb96346ad19de23a2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4MGQxYjI5NzBiNDAyOTYyYjJiNWE2OTcyYjA1MzhhYjUwNzkxOGRjMTRiNGFiNWE5ZTkwZGEzYTEwYTA0YWViIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJjODI4Yjk0YjUwMTRhNDFkY2E0MzkyMWJhODdkZTczMDJhODAzYWI1ZDNmMWMyZmYwMWQ5MDhmMWZkNzZmZTJhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJiN2JlZTkxYTUzNDJlNzA1N2FmY2M0MmE4MGJjMjQ1N2ExOTE1YWUxNGIwZmQ4ZDM5YThiYjFhNDY2M2MwNWUxIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/preprocessing.py#L652-L733",
+          "version": "repo-lines-v1:sha256:60953a839e0d3bd2eb9b7f209f038e6c1d3a7ceb2e10226ce6cfa5ee618dd3e3:eyJzZWxlY3RlZExpbmVDb3VudCI6ODIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1ZGM5MDBhZTRiYTg1MmJkMDMyYzA1NTdiZjBjM2IzZjU5NTA1YTQxYzBlNmIxZjdiZTZhZmM0ZWRhMjcxMDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ5ZjhhYWM2MzI0MzA5NDU4MGY1NTk1ODRlNGYwNTZkN2ZkODQzYWI1ODljMDA5NjNiZGVhNWMzNmUyZjc1MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE5Yjk4MzJhMTg0ZTE0NDM0N2M2OTNmY2I5NzJhMzhmOTI5YWZmN2Y2Njc2YTc4ZTJlMDI1OTcwYjc1N2U0NDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg3MmMzMThlNTBkYWE0YzEwYjM1YTQwZjMwMDBjMWU3YmE3NTliOTY1MzA0ZmViNDIxMjVlYzkwZWMyN2JmOTIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/preprocessing.py#L843-L999",
+          "version": "repo-lines-v1:sha256:df529298c4648119db4999d6e37697b90fbd3f8f23a3f54d9d120c38b7d9e111:eyJzZWxlY3RlZExpbmVDb3VudCI6MTU3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhNWZlNmNlOTIyYmUyZjc1MDhiNmNiMWI3YTg2Y2JlYjk0NTVjOWQ3NDgwYjU0OWJmZTQyNGU5ZmEzYWY3MzkyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJkN2E2ZGY5OTZhNGU4ZGVjNmVmNWRiZmJlOWRlN2Y5MGQyMjkzOWEzMWEzMTU1NjJkYjJiNWQ0MzUxOGJkZjNjIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI3YmVhMTQwMGQ2MjU5MjdlMmMwOWNmOGM2Njc5ZTk0ZTg5ODA2NzlmZDJlNTgwNDUzYzIzOTYyOWRiNTE1MWY0In0"
+        },
+        {
+          "resource": "repo://tests/test_preprocessing.py#L567-L601",
+          "version": "repo-lines-v1:sha256:0c9d1adc359cc180a94b2b1d9e254e9a9235b16b8819be774a9fdb1515c06c22:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkZjkwNjQyM2QyNzgyZTk1OTZlOWJhNzE2NTIxNTg2MmM5ZjE0ODFhODI4YjgxOWE3NjM3YmYyNGNhZWVjODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIzNzk0NjIxZWZjMGFjNDMxNTc2NWU0Zjk5ODA2ZmI5NzUyOGRmNGY5MmU1MjkxMjkzNWQ0ZmM3OGIyOTIxM2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNhNWVjYThhZjU4YWZkMzNlNTQyNDU0YzFlNzk3NTZiMTE3Nzg1YTA3ZmQ3NGFmOGRkY2Q2NGY3NDNmOGUxOTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b203e59a63a746e2b975d03efd194513",
+      "statement": "FoldResult converts preprocessed train/test features and labels to four NumPy arrays, while builder-level to_numpy and to_pandas expose the raw full dataset without applying scaling.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L594-L630",
+          "version": "repo-lines-v1:sha256:5fa02457206c5b76e93bd1d3bd3581317cca4978ddce75de7dc7d3db7437dc6c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMjBiNTYzOGI0NDhkMWU1OGVmYWM0ZjMyOGVmOTNmODI2ZDZjMmRkYTUwMzUzOTY1OWY0YTViNTdmZjBiZjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2ZWI5MjJhNzZhMDMxN2M2MjliMmU3ODkwZjQ0Yzc2MjQxNzkzMWUxZTc1YTBjZTAyYWJiOTE4MWVlYWQ1N2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI0NTI2YjkwZWQ2NDYxOWRkYzk0MTFhMzBjNjJkZTM5MjkwYjM4NmY4MjZmYjg3NTdmZWY1ZTQyNWEyY2Q0MDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJhODYzZTkwODY0OWZjYTNiM2I1MDFjOTI0Y2E3OTVlOTZjMDFjYWU1YzIyYTJlYjc5MDQwODI5NWY2Nzc5MmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L82-L126",
+          "version": "repo-lines-v1:sha256:e70f2fed8b0f3be03f946cd8396e74ae05324eedb08421a2c7275b4925ad8cbb:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YThlNDMyOWU0MTAxYjRiNDljNmQyZjg3MzI2Mjc0OTY0NTdiMzY1NTRkNDFkYTI2ZjI1MGVjM2NhOGIwZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0ZjMwYzZlMDdlMzQwYjNkNTMwMTNlMWE4MTk4ZTAzNTAyYzhhNGE5Mzk1NDJlZjNiZmEwM2M4ZDBjZTM0OTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVmMDU3MWIzNDM0NjMwMzBmNWJlMzI3ZDFiZThhMTUzOWNlMzQ4NmFmMDIxZmZmODcxZTY1ZDA4ZDBmMDM2ZGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0YjZmNGZjMmU4ZjJkYjljZTIyMDA0YTY0NTk1YmZhYThiNDc2NzVjYTNiZTg4ZDExY2UzNmNmODZjMDQwNjQifQ"
+        },
+        {
+          "resource": "repo://tests/test_dataset.py#L578-L630",
+          "version": "repo-lines-v1:sha256:3fee13d1a6966e8ff1f1e2dc4da70f3d820a3694db6afb65f9cd36d8914bab13:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZTJhNjEwNjMxOTMwMTI5NDA5NDk1ZmJhN2EwNzRjZDM0YjJhZjAxNTUzYTY3ZWMxZTc2ODYwMzY5ZWMzMTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdkMWZjODQ4YWMwNDAwOWU2NDM1NDAwNmU4NDk5OTRkMmY3YTRiMDE1MjFlM2M0NmJjNTA2YmYwNTViOGU5MjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmMGQwYmE0ZmVmNzhmMzc4Njk1YTJkNDgwNDAwMTcwMjY3ODYyZTUxNzM4NWY5NDU0YzE2Yzc3Njk5MTlkNzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_61cc94b761e144f59cdf8e310d85b1f9",
+      "statement": "Feature and label percentile helpers compute cutoffs only from explicitly supplied training indices, keeping threshold estimation out of test rows.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/dataset.py#L631-L696",
+          "version": "repo-lines-v1:sha256:3bbd69e4ce3396b8e5f5eaeda3b6bdec38b46431c96bbd499a94419b32dfb546:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlMTg1OWU5MWMzODQyZTkyYWM1NTIzMWY4NTI5MWU4ZGMyYWM4NTZiNzUzN2RmZmU1YjE5MGY3N2Y5MjA4OTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBiZTEyYWMzNTcxYmVhNjhjZDliZWYyYWVmMzJmMGI0MTcwYTk4YjM1ZTRmZDQ3ZDc5OGMxMmVjN2ZkOGY0YjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg3MmFmODExNTNjMTkwYWI4Nzk0YzMyYTMzZTMxMTgyNDIxMmYzNzZmNmI1NGQ4ZmMwN2E0MThlNDY3NWMzNTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_dataset.py#L633-L684",
+          "version": "repo-lines-v1:sha256:e64c0934c945715c3a49ee3545d496a996c16b6fa33cd03c51ebf1dc751b7a29:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5NGE2NjMwNzA4YWY5M2VkN2ViOTNhNTJiODUzOTRiOTdiMTM5MWY2ZGU3YzUwZGIzNTdjOWIyYzAzYWI3ZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIzNGI0MjcxMzliZjBiN2UzMTBiOTQ5YzM5NWFiZGNlZWYxMWEyZTIwNDM5ZTBmYTc5OGYzMjA1NjA1NGY4ZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJmYTFjZWM2MzZmMWZhMDk3OGQxYjA5NDBmMDYyZGM3ZDdmNmI1N2RmMDhhYjA1NDUzZDVhZmEyNjBiYWRmNTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIwZjgwYzc5NDJlMGQ3N2FhNzI1MjJhZDljMjJhNjhkZTE5MzllMDcwZGM4N2VkNjg5YjQxMDEyYTc0MDI1MmMifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:41.957Z"
+  }
+}

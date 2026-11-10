@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:0eb596d9c0b7893fbd70eac69e78514a6f1bcb450d15b9f9b835a204ded16493",
+  "claims": [
+    {
+      "id": "claim_c8472f4572e34c0c9a4cd01a9878f9fb",
+      "statement": "compute_features normalizes list or YAML feature requests, validates every requested registry name, output, and parameter before execution, and rejects duplicate outputs or collisions with input columns.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L196-L217",
+          "version": "repo-lines-v1:sha256:8b82d96f6c56175f2e786920b2c3c2a6ecb396d224acd63421754d93f467a2b8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYwNWFmZDk3NjVjYmU5MWExMmI2YTU1Y2FhZjQ4NDQyY2Y2NGQxNDI3NjNmZmJmYzFiYTJlNWYwODk1MmNjYWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY0NzlkMGQ2OWQ4YzgzMzFkM2Y0M2Y0MzQzMDI0ZTQzMjI3ZWVhZjU1ZjlhMDY2Y2M4MzI3ZmE3Y2IzZTg4YTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQyYzE2M2ViZDljMDE5MTBmMDlhMjYzNmE5YzBjZWMyODcwY2JkMmVhYzIwOGM5Y2YyZDc5OTJhOGQwMDVjOTgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L313-L427",
+          "version": "repo-lines-v1:sha256:7297631dc3a7093e9695c43643b7004e38563f685c7d9f8b2162fc40e226b3ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4NTNmMGQzMTY4YzBmMjA0MzliMTk1NTdkZDkwM2VkNDViNDVmMjE4YWE1NmNhZWMxNTc2OWQ1YmFkMWJjMWMwIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0YWRmMDJiMDE0Njk0M2EyYmI1YTgzZmZlYzZiY2QzODgzZmM3NmNlOWJhNGI3YThjZDczMDY2YTcwM2IwOWU5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI3OTBlNjM4NWQ1M2VkMGFlZjhjMDExNTBjNmQ4NGM1MDBjOTI0M2JiZGMzZWUzNjZhZDA4ODZlNmRhYTRkMGY1In0"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L269-L318",
+          "version": "repo-lines-v1:sha256:88661b610e31778f64cc09376105d93f9ebab9fc637a4262ab3c795f21aa5af8:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2MDlmYzA3ZTQ3MGJhZTE1Nzk5N2ZiYmIyYmM1NzA5MGQzMWRmZTUzZWEzNmYwMzVkMDNkZjM2ZWE4MmM1YjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4MjhmNzNhYmJjNjkxYWYxZmE0NzkwMzZmNjBkMzg1MGU2YjkxZDI0NjJjNmE5OWI3MjNhNzZmYmQ5MzgwZTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlZTJmZjhmYjIwM2YwMzdhMjY4MzM0ZjM1YWQyNGIzMzk5YTI3M2EzZWEyN2E2OWE2YzQ0ZGUyNzZkNTgwNTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c6e29886d60d4f599c14fc6f7e6203b1",
+      "statement": "Feature computation validates canonical numeric OHLCV input first, requires canonical FeedSpec price/column mappings, and performs ordering, dependency, and calendar-grid validation before entering the feature execution loop.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L196-L297",
+          "version": "repo-lines-v1:sha256:a4a0b742733ab77fc76eb8d6f3cd99f029392a0b51f66a400cbd2c2807ce1bba:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmNDc5ZDBkNjlkOGM4MzMxZDNmNDNmNDM0MzAyNGU0MzIyN2VlYWY1NWY5YTA2NmNjODMyN2ZhN2NiM2U4OGE1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhMGVjNGZkNDUxNTNlYmRhMmNmNjI2NjJmNzU0ZWY5MTY0M2IzYjZiZGZlNDc5MmY2MTY1MWNjMjllMjgxYTY4In0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/bar_grid.py#L97-L133",
+          "version": "repo-lines-v1:sha256:71b2f1376cbb479011b33051fa6fbcd89b51727426020c9eb8bfc74c3d3e0330:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE2ZWNmNTM4MjhiNGRjMTk0MGI3ODUwNDVhZDAxNTU4OGE5MzJmYzQzNGIwYWE0NDE4ODJiZDllYjBkOGUxMjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkNjI1NDFmYTk4YmU3MDcwZWJlYjE4YzFmZjdjNWE4YzkzMWM1NzJmYmU4ZDY1NTAzNDQzY2QzYjA4OTc1NTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzZGYyYWNmMDZlOGMzZjAzYzcxMzVjNmU4YWM1YTljYTU0MzJhYmUwNmE3NGFjYTBmZGQ5YTUzYTAwOGY5ODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM2MTAwMjIyYWZkOTEwYTBhOGI1YTc3Nzg4ZmQzNGYxOTc5MGEyZjU0NWY2YWFkMzc2ZTVkODUxODg0YzMyYjEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/schemas.py#L99-L191",
+          "version": "repo-lines-v1:sha256:72f6813039dbc34185d04b696acfd0f174f840d5fa2984298e7a59e9440bd426:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhMTM4OTE0OTM0ZTAyOWY0NmI3MTU2NDI1MDYwZGU0YzUxZDQ5MTA0NGQ2ZWFiYTYxMmI1MjUxZjA4YmQzMTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkNGQ3N2EwYTU0MzZiZjIyYjBkOGM3ZmYyMGY3ZmY3N2M0ZjFjYjMyYzZhOGM5MWQ1MDJkODJjYTY2Njc2YjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhMzg0OWNkMjc5NWQzN2FjZDY4NzA5ZjZjNDY3YjQyNzBlMGMzOWM1MjQxMmFlNDI5OWYzM2I1NGZmMTZiMDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ4MWM0YTk1ODNhY2IwOWI2YzYxYTQ4ZDUxZjhmM2QyZDAyMjkzN2JhNmIwODZjNGQzZDgyNDMxN2E1YTQwYTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b7967f27209a44619550e70cb426de19",
+      "statement": "The @feature decorator registers the original unwrapped callable and validated metadata in a process-global unique-name registry at import time; built-in lookbacks come from authoritative calculators while non-built-ins must declare a lookback.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/core/decorators.py#L132-L224",
+          "version": "repo-lines-v1:sha256:5a1d6d1f5a6d3d17b22a3a7c3c73753484a3f732ee3c8336d5b55b2e015ee67f:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0MTEwNWQ0NTFlMmFjZDQ3MmFiM2Q3OGY1ODFiZjVkYjg2ODM5NmFkZmM0ZjY3ZDZmZWRhNGMyNDQ5Nzk1ZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgxM2M3NDlkYzU2YzM4MTE4OGRhMmYwYTA4N2YyNzcyYTUyNjIyM2NhOWMyMDQ0MmY4YzBiYmVmZDljMmQ5MDcifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/lookbacks.py#L220-L256",
+          "version": "repo-lines-v1:sha256:d2e8007251d52f352bbda0cec34cf0dc5d8043107b43021d223165f66b5128c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhMTA1MTk1MjE3N2ZiNjhkZDE5ODcwNjVmNmI0MGU1ZTg2YjNlMTkyZWJkZjJjZjZiMjc2YWRlZTRjYTIwYWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5ZTU3MDM4OTExYTMxYzQ1ZDUxYzYzOTliOGVhOWExZWYxMmNhOTBjYjA0MDZkOWJkMWJhZTQ5ZjMxNDk4NDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0OWEzY2YyNDkxNWJjNWY4NGMxZTM3MGE2NWI3N2Y1ODFiZmZkZWQ2YjMxYjU1MjI5OTAxNzk0N2Y0ZDM0OGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAyZTk4NmU4NTIwNzViZmE4Mzc0MTJkY2I4ZDc3NTgzZDRjNGYyODVkNGVjNDJjNGJiODI3MWQ0NmE5ODM4MTEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/registry.py#L100-L124",
+          "version": "repo-lines-v1:sha256:17247b2a916b038e1ab2b32e377ce040bc6cbc1e0a77c2322aa8e7b33d61a7a1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0OWUzMTQ0NDEzZjQwMmZhZDA2MzJmMTc4N2Y5MWVmOTQ4NWRiMThiM2UxNTlhYzJmMmE2MzQzNjE3YWZhZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmNzViNmE1MmQyMTYwMWI5ZmU2OGMyMDczOWI3YmM5N2E2M2MyZTNiMzUzYjBmMjEwYjMzNjEwODQzNzc3MGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg2MDA2NTI1MzAzYzRiMmZkN2RjMTFlODFmMzMxOTA3OWRmYWNkMGEzNzNkMzU5YWI0NTJkOTM5Yjg4ODE2ZjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyZDYyOWM0OTA0YTNmNmFjNjY1NzA3ZDQyNzQ5ZjE4OTVlOTBmMWE3MDQzMWNiZWM4MmQyNTFhMzRiYmJiZDUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/features/__init__.py#L27-L50",
+          "version": "repo-lines-v1:sha256:aef9b749f9a1c2ed43315098915e2d1dfcdb6cd5da04e908f726b40078799ee9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxNmI2YjkyZDM4NTY5NGQxODY0ZjRjNWFkYWJkODhmMjRkZTMwNzlhNzgzOTFlMDljNzVhMDI5YmNiMmY4ODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwMzI2Y2UwZjcwMDU3MzQ1NTMxZjhhNDNkODFhNjdlOTM4MWNmOGY4YWE3OTUzZTcwYTJiNGYzNGJkODZhZDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM4ZTllZGU3N2IxZWM2MjY1NjFiMGU2NmRkYTYxMjczY2Y1MzA2N2Y5YmM4NWI3YmE2NGZkY2MzN2NkYzc0MDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_30003b2bf14c4f94a9466c629f0520bd",
+      "statement": "Dependency resolution topologically orders only dependencies whose names are also requested; it does not automatically add omitted dependencies, and it rejects cycles among requested features.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L492-L546",
+          "version": "repo-lines-v1:sha256:73e9a027371019cf605d0be5c42aa9a999d6feb0520c594027bfc1afb45c1ea2:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkZDYyNDQyNmIwOTY4NmIyMzQwNWQ4ZTdhMmZiNjNjZDFmZWFkMzY3YTg4YmViYmMyM2U1MTAwYTBlMzVlZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIyZTQxZGNjMzQ4ZTc2NDUyOTUyMGRkNjAyMGFlMzY5OGI0ODA5YTdkOTRlODcwMDVmMmY0ZTFlNWUyYzQyYzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhmNGRkNWVlYjlhMTc3YmZhMzE2NDYyOGRiNTNkNDY2MGRlNzM1OTdjNTU1ZTA2ZGMxZjc3NWE2MzRiMzc3MTQifQ"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L527-L556",
+          "version": "repo-lines-v1:sha256:5975aca9a3bf8cedf818c457b75558142876be40ee6976dd440ae5b9a9ccafd9:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzOTg5MGYxNDA2ZTJjNjExMmQyZGE4ZjE2YzkzM2I4NGVkZDRlMTk1M2VmOTA4N2QxZDkxZTlkMGY5MTY0NmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgxNTU0ZmE1NjAxNDRiNGQ5ZDI3ZTgxZDNhZGE3MzUxZmRjNmM2YWU0ZjVlYzI1ZWE4N2QzMjk1NDhkZGM3M2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkMTVlMzc5YmFjZTdlYmFkMTE5NmE0NzcxMGFlNDlmYmFiNWE1MDRmMmM4NjJlODYyMTZlMmNhYmQzMGI2OTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dbef263365624bbeacf0dcfcad86b991",
+      "statement": "Ordinary feature dispatch is function-signature driven: registry defaults are overridden by request parameters, known required column arguments are mapped to canonical column names, and returned expressions are applied over resolved groups before being appended.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L549-L708",
+          "version": "repo-lines-v1:sha256:90abcee642fa9d5de8836010ca74ad18461c0ea98d6505f153933c4b15dea2b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJlZTg1ZmVmOWYzNjNlY2ZlMjk4YmZhNDNlMDBmYTA4ODY2MjRkZDY5ZmZkYmQ2YWM4MjkzZTk3ZGY1MGQ5MWRhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIxMTZjMmM4OGUyNTc2NTVhMTMyYWY1Mzk0NDBjMjdmZDhlN2JjOWI1NDU2MmFiZDU1ZjYyODY2OTE5ZWRiY2U4IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIwZDYxNzQwYTAzMTJhNzM1M2RiNThiNmY1NWUzMWZiOTM5NjcyM2ZiNjQ1MmMwZTc2OTAxNGM4ODEyYzNjZjk0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/dispatch.py#L1-L22",
+          "version": "repo-lines-v1:sha256:22d516bb12abe0717e6989530d277bbfbe352b3623c9557f4552f4c7ce9a8a29:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2YmYzZWQyMDRmYTVlOGRjZTIyMjdmNzQ0NzRhOTZkODFlZGI4OWI5OWQ2ZDNkOWVkYzJiYzJhYjRkMDhjMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4ZTUyYzA5MjlmOGViODYzMzQzYTcyZDIyOGVjZjA0YjUwYTc4MWM0NjczNDM4ZjViMWRmNWI4YWFkMzk4MzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L559-L614",
+          "version": "repo-lines-v1:sha256:4656b3d8fba66624c9bd44c09595710c1355b146ef460d6e2966962cb20f7418:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhMWJiMGYxYTRiMTQ2ODYzYmYxM2UxNTI4YTg2M2UzMzA5ODJkOWZhZjk0ZTliMTBmMWE1N2I2NjY2MGZkY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhYzA2NWZjZWUwOGIyOWIwYmI0N2FhMTAwMWM0YzFlNzIzODMzY2ZlM2E0YjI5NzdmYjA0OTY5YWUwYjc4YWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzZGYyYWNmMDZlOGMzZjAzYzcxMzVjNmU4YWM1YTljYTU0MzJhYmUwNmE3NGFjYTBmZGQ5YTUzYTAwOGY5ODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4ZTk4YWNkMGU3Zjk0NDY2MDNjNmQ2MmRiOGQ0MjcyNTI4YjYxMmMwMWY5NGMyMjNmY2JjMTBjMmNkYjMxNzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f6876cf0a3de46c69393a2b958fcb46d",
+      "statement": "Recognized asset columns automatically isolate per-entity feature state; observation mode preserves input row order and cannot be explicitly de-grouped when a recognized asset column is present, while calendar-aware mode sorts by group and timestamp.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L270-L298",
+          "version": "repo-lines-v1:sha256:9ee2930733c7b72e961f28734c8255feff357a2cf5fdfcf006856d235d84f6ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0YzAxZGFjYTQ4ZjI4NTI4ZmQzMGNjMWVkYTNhNjI1YmRlZGY3ZTlkOWEwZWRkZjI0NjRlOTBmYTE1OTZmMjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5YmZkMDQwNGUwZDIwZGRiZTJlMjU2ZGI5ZjA2ZDkzMGEzOWJkNzk2NjZiZjlmOTM3Njg3MzQ5N2FhYzlkYzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4Nzg3ODlmMjdlNWU1YWY3YzFhYmY0MGQ5ZDA0MjczMjE5NjI4MGFkNTMyM2I5MjBkYmUzODkyYzc0ZGQ3NzQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L429-L489",
+          "version": "repo-lines-v1:sha256:c495f0a2efefa09b1249e3e1a8e3ad1a797fe6d7892cdd258dfe830ffed29a5e:eyJzZWxlY3RlZExpbmVDb3VudCI6NjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwNGEzNGJmOWZlMDg3MGVhNTM4NTc5NzU3OWNhMjE0NzIzMzRjOGUxNGJhMzc3M2MxY2M5YmM0N2Q4M2NkOTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkOTU4ZjU5NjhiMDc3NDU5OTk4NTI5NzRkZTU2ZmUxNmJlYTJhOTNlN2UxMjlkM2NiNjY1ZjhhNTA0NjBjNTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM4ZGQyMmZjYjhiOGYxMTYwNjJiN2M2ODlhNjA1ZTg0MmI5NGM0ODdlNzdiMWY2OTQ2YTA4YmIxNTAzZjZmY2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwNGE1NjA0ZDA0M2M5YWVkMTQ5ZDQyZjkzY2I2ZDI5MzdmM2M1MDNkNGFhNGI4MmY3NGMyNTc4ZTQ0NGM2MzMifQ"
+        },
+        {
+          "resource": "repo://tests/test_all_features_integration.py#L105-L159",
+          "version": "repo-lines-v1:sha256:c2308f0b0aadc5a139f8d39ed737c1268af69bb410a446f67cf9f53a51f1a22c:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlMTFhYjFlMDVjNmZmYmY5MzY5ZWIxODA0ZmY3MGRkNGVkOTJlZWMzN2RkN2E4MTU1Yjc3MDg5ODAwNmRiMmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4ODI0YTUxN2RlNjM5MTlkZTlkN2U0Y2Q2ZGIwNGEyYzJhYjMxMzc1Yjk0OWY4NTMxYjMxMmM3MWQyYzRmMDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzNDNjY2NiOTJiMGM3OWNiZDM0YmY0MGJmYWM4YjJiYmQ1MDQ0NTlhMjA5MDU4M2E0YzUzOGY0NTc2MzZhYTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5MTA5OWUyY2FiMzM0NTEwZGUzNWEwZjQ2YzBkMGFjNDBiZTc1MDJjNjAyZjFkMzQwNmRjNTQzYmExYjQ3NTkifQ"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L320-L402",
+          "version": "repo-lines-v1:sha256:e5fedb55f65db3182b9ed378b77ce812edfdb23bba21ee11677d09d17c492ad3:eyJzZWxlY3RlZExpbmVDb3VudCI6ODMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3YzFjOTFiZjdlZDVmMTBmOGQ0ZmQwZmNjNGFkMTA4NTRkNzgwYjJjOTg3ZGJmNzdmOTc5ZDU3NjhmYzZmZjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzZGYyYWNmMDZlOGMzZjAzYzcxMzVjNmU4YWM1YTljYTU0MzJhYmUwNmE3NGFjYTBmZGQ5YTUzYTAwOGY5ODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkNDY5MWMyZWU4MTRiNzdhZDFmYTY3Yjk3MmQ3OTc5NGMzZDY3NjhmZmY2OTJmMzJjMWUwNDhlNzQxZWRlNTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cfbb89c82c3e4404a3a0324144fd0d59",
+      "statement": "Session and elapsed windows are supported only for sma, stddev, and realized_volatility; they reuse finite row kernels over causal original bars, isolate groups, leave incomplete windows null, and reject unsupported recursive or multi-window features rather than converting their definitions.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/core/temporal_windows.py#L14-L45",
+          "version": "repo-lines-v1:sha256:72befe318989d68ab5ad7553f629bc9dcb6da27b0d6b74a4778a76278aca8233:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkNmNiNDA4NzU0MjhhY2QwYzA2YWY0YWI1YjM2MjY1MDY2NDFhYzliODBkZDQ2OTNjZWU4ZDNhMWRkZTljOGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiNDk5MTcwNTA4YmFkOGEwOGNmM2EwYjhmMWZlYzc1Y2ZiMzExZjFjMWJmMWI5M2RhOTk0ZjczMzdlZTU5M2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5NTMwODgwYmFlODgzOGQ0NDU2YmI4YmJjNjlmNjI5NTYwMmE0YjUxZDc4NmZiNGYzNmMyM2JlMmFkZjQ1ODYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/temporal_windows.py#L48-L159",
+          "version": "repo-lines-v1:sha256:e19c2bf05cf13fa69263c9ea681cc4ec62a132ef8282a05c6b28c8f82a057e6b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1OTA5YTUzYTYxOGQwMjhlMWQzMDAwYzBhN2FiY2VlY2JlNWZiMzdmNGU1MTFlZmU0NjY0M2ZhZDZlNjY4NzJmIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5NzRkNTVlOGIwOWUzMTI2YmUyYmRiYmZmZWJiZjIyOTgxNGE0YWQ4NDEyZjZkZjRkYWMzNDdlNDJjNDcwNWMzIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhNzIxYWQ3M2YxNjFhMzliNzY3Mjk1NWY5OWFkNTU5MWExNzQ0OTg1MGY5ZmQzNjM1YWVjM2M2ZWM0MzJjMTY2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://tests/test_api_temporal_windows.py#L178-L214",
+          "version": "repo-lines-v1:sha256:e72baa405e1ec283dd676671a9acc903bd1824498ea260a5483002a2921c4caf:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhZDI4MmRjODMyZmU1MmM5NzJiN2VmY2VlYWI1OWUyMThlZGRlOGRiYmEzZjIyYzhmMDcxM2ZhYzhjZTdhNWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3OTZjM2M3ODVmNjJkZTNkZWQwZmM3NDU0ZGZhMGQ3NzhlNjAwOTcyZDVmODNiY2ExMTA2M2EzMmIzNjY1MzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2ZWY5ZGJhMzA4NTVhMjY0MzQ0YjEwM2EzOTM1NmVmMGFjNDZhMzMwM2I3OTgwMjZjNWY4NGViOGYzNzY1YjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmM2U3N2VjNGUxMzRlZjU1NGMxYWE3Yjg0ZTJiYzFmZjY5NzM2Y2NiNjZkMjIxNjc3ZDdhOTllN2JkZWY3YTcifQ"
+        },
+        {
+          "resource": "repo://tests/test_api_temporal_windows.py#L51-L142",
+          "version": "repo-lines-v1:sha256:18cce876af6fe56f5c2d2f922ce49806abc3d102b0fc083ed09cff4a9da652fa:eyJzZWxlY3RlZExpbmVDb3VudCI6OTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmNjJkZTNiOGM3YWJhMWUwYzRkMmM4ODVmM2M1YWQwZjE5ZTYzMjYwMmZiN2UzOGUwZmEyNTk4YWE4MjRhMzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFjOGQ4YTQ5YjYzZDBkZGY3OGQxOTBlYWIxN2NjNDU3Mjc4NGM5OGRmMWZhZjM3ZmJiODMyZWQwYWRhMTZmNTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkNDY1NjkxMTFiYTQ4MTk1NmZhMzlkYTNjYmM2NTliYzU3NTBhN2RjYzljYmJmYjMxNzQzMDIwOTQxNjkzZWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ed2cf07ad5f84c27972191d472c63b3d",
+      "statement": "compute_features preserves eager and lazy return types; temporal lazy execution uses map_batches with optimizer pushdowns disabled so downstream filtering, projection, or slicing cannot remove warm-up history.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L65-L78",
+          "version": "repo-lines-v1:sha256:eac7c0b016a2fa623f54806179bce88c50f22aa3bc0ab8bf4f75c3946e37ba50:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1Y2Y0YTg4MzIxNzU2OTYwZWFlMGMwYTcwYjNkOGNiM2QxMmMzOWI5NDgzYjkwMjM1NmI3NDE1OGRmZTAyNTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlZDJkMzg5MGRiNGNlNmM4M2Q1NDc0MDEyMDIyYTUxYWQ2YjM5YzQwOTFkYjQ2NGVkZjYyMjMxYjk2N2NjNDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMxY2M4NjFiNDFkNzY4ODIzNTBlMjQ3NmFhZjI4MGViMzAxZDUwZDFhZWUwZGM2YWJjZmZhOWYyMjQ3NWVjNDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQwMDkwYTI2Y2UyMzBmNmRhYjcxOGJjY2JhNzNmZTI1MzEwYzhjMDE1NDY0MWFhMzQxMjRlNzQyNTg5ZDE3YmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/core/temporal_windows.py#L105-L134",
+          "version": "repo-lines-v1:sha256:1d3c78da6763e9dc2fb74e2da8152961a26aa75cd258b4a89fcb3dce23f54b93:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzZDE4ZGNmZjYwYTAxZjBlYzBkMDBjM2E2ZTA0YWEzYmE5NjA5MmIxMGY2ZGNlOTNkOGEzNDI4M2IzMWVjYzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxMzY0ZmRmZWU0YzE5MDUyNTJlNTRmMDhmMWYzMTlmODI5OWE3M2ZmN2ZmMTU0ZDliZjk4NjUwYmJmYzkwZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlZDE5ODYyMDNlZWI1OTUxNTQzNzk3OTFiMjQ3NTM5MmJiZDEwN2U0MTBlZjI4YmI4ZjAxZTc1YTE1MDk1NzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3M2I3ZDdkODFmYjdkMmVjODFiOTdhZTA2ZDNjOTAyMDViYjNiODM5YTI2NDg3YzFkOTFkOGI4OTYxY2IyYTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L91-L102",
+          "version": "repo-lines-v1:sha256:70359ab4a697f3b4f45af5b34e75d044f4e8804ea8123be63eb10f64996dc2d3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2ZGJjNTQxNjgzMzFlZThlODYzYmNjMDI5MDAzOWZlNmQ0NmZlMjI3MTBlYzAzZmQ2Mjc2M2VjZTk3NjVlZmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzODNiZDhjZjc4OTNlOWQ0ZDMxMjY0NTkwNzY4N2I1OWQwYTYzNzc0NzBjZTlmN2FhNWI3MmJlMWUyOGU0NWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlNjI1ZjQzMjM0N2E1MWZjMGU3ZjRmMWMyZGU0NzBkZTVjYjcxNDhiMmRhOTdiNDM0MTQyNWU5YzlkNDM0OGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFjOWNiYzEzYWI4MTQ3MjZmOWE5MGZhMTQ0OGEzNzUxY2ZmMDU1N2U1MTM3ZjkwODU3YjA5NWE5MjQ4YWJhYzkifQ"
+        },
+        {
+          "resource": "repo://tests/test_api_temporal_windows.py#L122-L142",
+          "version": "repo-lines-v1:sha256:bed4756fd93f64ac914c91acad7042e74af834232b2ebbd9aae350716a17315e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2YjgxY2UzNTgyYzQxNTYzYmZhMzY5NTVlMjFmZmQxYTM4YTFmY2FhYWVjMzc3MDIxOTZkMDA2MDEyNDg4MmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhNzkzYTBiZDYwYzExYWU1ZjUxZmU2ZTQxMDJkMDFkN2JkMmZlODgzZTQ4ZGNhZmJlNDYyNDlhOWJiYWFjZWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkNDY1NjkxMTFiYTQ4MTk1NmZhMzlkYTNjYmM2NTliYzU3NTBhN2RjYzljYmJmYjMxNzQzMDIwOTQxNjkzZWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fbbfdbc426f14026a4bd724ae7ad20fa",
+      "statement": "Single-expression outputs use the requested output name, mapping outputs use output_key, and sequence outputs use output_index; append-time checks reject collisions and duplicates, while containers without any expressions and unsupported return types fail.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L651-L708",
+          "version": "repo-lines-v1:sha256:5298f0f739c66001505269e3db1b0bcdbf8a5b559c8cbebaebf0445f78b24419:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NDI1YTU4NDIzMzM0YzRmZjRiNGNmZmUzMjU1NDRmOGU2NmMwY2JmOTZjNjQ2ZWE4NTZkY2I0ZDE3ZjUzNWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExNmMyYzg4ZTI1NzY1NWExMzJhZjUzOTQ0MGMyN2ZkOGU3YmM5YjU0NTYyYWJkNTVmNjI4NjY5MTllZGJjZTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZhYzllM2Y3NTMxYTg0N2Y0NDQ3ODVhZTYzM2FhZTlkMDMwYzM5ZDIzOTRjZjRkMDJlMjRlMjEzYTQyMjQxYTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L618-L669",
+          "version": "repo-lines-v1:sha256:199df531bc5f9d315d9aa7efbde520bcc539ab77c6437333f7639673ad34a1df:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2NjIzNjg1ZTVhMTQxZDU5MzgzZTRjZmIwNjY0YWQyZDBkNWJjYzU5YzMwN2FhYzFmYTI1ZGFjMDFjYzdjNDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc4ZTk4YWNkMGU3Zjk0NDY2MDNjNmQ2MmRiOGQ0MjcyNTI4YjYxMmMwMWY5NGMyMjNmY2JjMTBjMmNkYjMxNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b57eb0c98b3c4f5aaaf8c6461cafe932",
+      "statement": "FeatureCatalog exposes filtering, search, and rich descriptions over the same registry used by compute_features, whereas unregistered standalone helpers under features are outside name-based computation and catalog discovery.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/discovery/catalog.py#L53-L218",
+          "version": "repo-lines-v1:sha256:13be09b60f3d2ab30ad365ec07a7eaa6a92d94813913733d4c0a40b7b3cb6cba:eyJzZWxlY3RlZExpbmVDb3VudCI6MTY2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIxOTEzZDhlOTNlY2I5NGI5MmM2ZGUyOGIyMmEzNTZiNzgxNGE0ZDk0NTMyYTBlYTgxNDg4MGEwYWRiZjFmNjc1IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1MmFhZTdkYjNhNmY5MDY4ZDJmZWYxZjFiOGI0ZjBlOTY1MTc5MjQ2OWJmNDBiMzI4NTIwZTlmMzI4MDE5N2ZhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJmNmNkZjZlNTZjNTgzOWRmMTU3ZmE1NDU0ZGJkMzMwZDNkMjY5YjcyZmQzMzUxNzYzM2E2Zjg5Yjk3OTc2Zjk0In0"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/features/AGENTS.md#L1-L45",
+          "version": "repo-lines-v1:sha256:0561570e1464bc8c0ee355f441fba633036ea49aa54fe1883cac143f93f17e1f:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxNmIwMDg0ODk3MGVkODI1ZjU2NDBhZjljYjg5ODFjMWNjODAyNDU5M2NiZWJhNDg3Yzk0OGI3YTQ0NzNkNzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzODRkZWEwMWNlYWQzN2YwN2MyZjZhYTJlZjI0MjBkYTFmMzEzNzI0ZDNlMGFlZWZhYjMxZGNjNDg4ZmQxMDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc3MTdkZTNjOGUwYzMxYTU1YTFmYWEwZmI2MDZkMmZjYjhhOTNjZDYxNTQ4MTc4ODg4NjlmM2I3MTYzYjVhN2IifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/features/__init__.py#L27-L62",
+          "version": "repo-lines-v1:sha256:577666df98901d09b1f023d36a94f269991911d5ffbd14dd6c88a7d681483b03:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIxNmI2YjkyZDM4NTY5NGQxODY0ZjRjNWFkYWJkODhmMjRkZTMwNzlhNzgzOTFlMDljNzVhMDI5YmNiMmY4ODkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmYmE1Y2NhNzYwNjNmZjJiMWEyNDY4OTM5OWUwYjY3MDgyZDM2ODNjZDJiMDk5ZmIwNWJlZWRhNDJmNWVlNjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwMzI2Y2UwZjcwMDU3MzQ1NTMxZjhhNDNkODFhNjdlOTM4MWNmOGY4YWE3OTUzZTcwYTJiNGYzNGJkODZhZDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_caacd40877194e8c8de232d5e0b92a3c",
+      "statement": "An empty feature list returns the original object immediately in row mode, but calendar-aware mode continues through ordering and declared-grid validation and may sort the data before returning.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/api.py#L245-L297",
+          "version": "repo-lines-v1:sha256:2202404979914cf67e60d7044ee58cd579a4a225f9de85d52fae7a60e6446af5:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU4NTZmZTg5Mzg2ZWZkOTU2M2Q4MWJlMTg0MGFmMGNhNWYzODgyZWEyZmY4NWNmNWU3NDI0NGU2YTQ0OTlhN2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEwZWM0ZmQ0NTE1M2ViZGEyY2Y2MjY2MmY3NTRlZjkxNjQzYjNiNmJkZmU0NzkyZjYxNjUxY2MyOWUyODFhNjgifQ"
+        },
+        {
+          "resource": "repo://tests/test_api.py#L105-L116",
+          "version": "repo-lines-v1:sha256:8241c7a405723014c346dd9a0684a31ad418aebf6aa70364d863cebb82e184f4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiMjg3OWE2NWE1ZjFkM2YxNmRhMmQ1ZjI2OWUzZjVmZTJlZTMzNGMwYTZiYmFhMTFmYjNhZDBmNWZiZDIwMzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkNDA1ZGIxNmI2ZWFkYTdlMTlhZjY3OWQxZmE3ZGFhNDgyNmVmYWExZTg2N2RiODhlNGZkN2YxNDI2NWM0MzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdhZGY0ZDYzMzNhNDQ2ODFlYjkxY2Q2NWU0NWRjNjkyMmQ2NmE5MTk2NjdkYzVkOGE5MDdjNTQ4MDNjN2EwNjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg3NzBiYzVjZDg1YzNlYzc1NDgyYWM3OTkwYzU3OTBiYmNjNmRhMzVmODE4MzEzYmQ0NjQ3ZGZmNDQ2Yjc2YWQifQ"
+        },
+        {
+          "resource": "repo://tests/test_api_temporal_windows.py#L48-L53",
+          "version": "repo-lines-v1:sha256:d826550406f1a8a4e6606075d7320c386e505b8e9c739d0de3d65deecefce8d3:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTljZDdkZTFmMWJjM2Y2MmI0YWE5ODFlYTU0NTIwZjAwMTNlZDRmZTUyMzU5MTZjOTdiOTQ4MTA5ZGZlZTBjOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODA4NTZiYmQ3YzJmZjViYTc2ZTBjZGM5MWRjZjQ3ZmMyMjEwM2FjOWQ3YTA3Zjc5MjIyZTQ4MzJhOTliNjY3YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDFmMWY2MTAyY2I4OTA2NzVmZjUwODlhYzM1ODlmYzNhNzVlYzdiOTAyYjFhMGNkZTY0NTk2NWNjMGUxMmZkOCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:41.957Z"
+  }
+}

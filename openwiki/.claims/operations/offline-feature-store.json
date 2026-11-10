@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:fa02232096c11a0d2b8aa1f3ba3fc695a20c9558d7f3f6b7faaec8e147ce1c30",
+  "claims": [
+    {
+      "id": "claim_8a2ccb958db04a83af16d2a8eaa4a078",
+      "statement": "The DuckDB feature store is optional: the `store` extra installs DuckDB and PyArrow, module import tolerates a missing DuckDB package, and constructing `OfflineFeatureStore` then raises `FeatureStoreError`.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml#L85-L91",
+          "version": "repo-lines-v1:sha256:79e2dd29f239cad4f31861ac73815e9f56cfbd222b0e546715406f3628daefa1:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmJkN2U5NmU5YzQ1MjcwMDE3OTg2NmMzMTQ1NWZmN2FmMTlmMzE4ZmVjYjdjOTgzNmUyOTcxNGVhYWU4Y2RlMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWJmNmFjNTAxN2YxMjZkNzM5MWFlNmY0NjNjZjU3YzZlM2E5NzU1YjI5MTk2MDMzOTBhNzg5ZDA0YTJmMTFkNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTE4NDY2YTk1ZDgxMTg2MTUwMDA5MGM3Zjg2OWU0OWVjNWIzYWQxNzRiOWU0Nzk4ZmZkNDliN2NmZWU1Y2I2OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjI0NDQ2Y2E3MDJjMGYwOThmNDc4YzhmYTZjZWVhZjE3YjFiYzczNzlhNmFkZDBhNDIxZDk1MzY5NDY3OTRjMCJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L27-L40",
+          "version": "repo-lines-v1:sha256:b6e67b9f0b639c16147dc45dc37aa5e8630d1466b3c140202d08959aece1be44:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjYjlmZmNjYmE1MTQ2YjJkZDE3N2EzMGMzMDU3YTQzOTVlYmQ1Yzc0NWQwNzg5ZDJlZDk1ZDBjZjRhZmUyNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MzlmNmFiNDYwZjkzOTQ2YmMxZGY3ZjY3M2I1OTMyZDNiMmUwMjczMzVlYzg0ZjY4ZTc4YjNiMjcyYjYzNDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFjZjE3YTc1YzJmOTIzZjY0ZDFmZGQ1ZTA0NjRkN2ZjY2E5MmJlZjc2ZGI2ZjY2YWM2MTVmYjU2NDA5ZWM1Y2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMWQ5YjI5NjRmMjIxZTA5ODliNWI5OGI1MGM0YjM5NTA0NWFjMjEwODA2YjgzYmFkMDYwMTk2MzliNTZiYzkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L99-L125",
+          "version": "repo-lines-v1:sha256:1b1678e69c8165eaa0f10d0a504ef9003388095903e1c32e95e7a21fd49877a4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjOGZmNTEwMWEyYWNlNWZiMGQ3ZjIyMTU4YjEwYzNlNGI4NjhiYTBkMzFkMzQ0NjY3ODQ5OTRmODgxNDI3ODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVkNmU2OWFlOGVkYjI4MmI2MDBmNjhkMDNjODMzNWZhMDEyYmM4M2YxYjUwNWQwYmI0YmZhZTM5OWI3ZjI4MmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyZDZiMzUyMGJlYmVkZjhkNjAzOTQyZmU5YWY3ZDAyMzE0N2M4NmVkMGYwNjFhYWM1ODY2MDJmMjlkNTlkYjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9d15d3ab31a34a5b80ee25f9b44f68a4",
+      "statement": "`OfflineFeatureStore` connects immediately to either an in-memory database or a file, supports read-only file connections, and closes idempotently through `close()` and context-manager exit; access after closure fails through the `connection` property.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L170-L225",
+          "version": "repo-lines-v1:sha256:6a60d5d5c8bdfafc299371b6a363e6c7b96a601453d489d643cba4818a1ed25b:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmNzc3NTA5N2I4ZDg1YjI2ODYyZGFlNjBhY2QyZDFlOTQ5YWE3YzgwZDM3Njk3ZjZmZmYwZmNiY2RjN2I1MjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExYTQxMzQ5OWZlM2E0MjA1NzBhNmU1NzMwNWNhOWJkZWQ3OGEzMzhkZTQ5YTRlMDZjY2EwM2IwNWJkYmZiOGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiYTUwMGQyZThjODc2MzlmOGI1YjdmMWYzYThiNzk4OTA1ZTY2ZjcwNWFjNGNkOTIxMzk0N2UyZGIyNDRjNjUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L99-L168",
+          "version": "repo-lines-v1:sha256:ea71c52de17d9ab37ebf6c427ae0d3f1d693dfb5dae419aee23dc00911ee76bb:eyJzZWxlY3RlZExpbmVDb3VudCI6NzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyYzU0YzU3Y2QwMGQ3OTVlMjgyNzEwMzgzZTIxYWM3NGMzNjhlNGQ3NzY3M2IzNzFiODQ3MWU5Zjc0OGY5ZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVkNmU2OWFlOGVkYjI4MmI2MDBmNjhkMDNjODMzNWZhMDEyYmM4M2YxYjUwNWQwYmI0YmZhZTM5OWI3ZjI4MmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMxYTllNjMyMzk2ZDQwNjRkNDM2YmM3MzVmMWRiMTY4MjViN2IyN2RhMmFhZTJhMmE3MTJmMDk4YTg1NTBmMTcifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L251-L295",
+          "version": "repo-lines-v1:sha256:26e85b7c7cf0f4735315dec1fdb30b04e7a95df45a18a05bfb220c378b717793:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyM2E1NmExNmMzY2FkYmExZjFkNTkxMTkyM2JhODBjYWRkZjA3YmUzMjg4NTYyODBkYzY3M2I2NWNjMGFmZGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhNTczODYyMmJhNjFiOWE5MjdjNThkMWM2NDE4OTY2NzU0MWQzMjM5NmM2MTI4YWRhOGZlZDk3OWVlYzc3OTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ3NjM3MzZkODAxYzg3YzZlNGUwNTY4OWMzOGNjZWUyZjkxOTEzZjdlMmIyYTNhZjM3YTgxNGIzYmM4ZGI4NmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxNGQ0M2RmZWZhZWRlYmNmYzIwZmUwYTJhZWVhMWQ4YTgzOTk2ZmI4NWM5ZmMyZTY1YmE3ODI5MzljM2UxNWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2961c1a3bae24cefb00be584d534fa4a",
+      "statement": "`save_features` supports replace, append, and fail modes: replace drops an existing table before creating it, append inserts `SELECT *` positionally into an existing table, fail rejects an existing table, and a missing table is created in all three modes.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L285-L376",
+          "version": "repo-lines-v1:sha256:763c095268e21f1e16d29ce64f0f2e204186d9d012e55185f3c4e7584dc01ec1:eyJzZWxlY3RlZExpbmVDb3VudCI6OTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhOGRlMjg5ODc3MzBiYWIzNzEzMGM0NDNmZjgwNWM3ZWY3ZjUyYTI5M2I1NGQ5YjVkM2U0NDA4ZjA1ZTI4OGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1NjljYjA5MjgwZWUwNzgxOTQ1ZTQ4ZDQwNDFiZDJkZmFhZTY5MWFkMmVhYmY1ZDNjYmEwODQ2YzcyMTZjYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlNmU4MDM5OWJlMGVjZThjYzNjZTgzMzdhYTViNDg0ZDI1ZThhMDU4NmY4M2E5YjUzNDI1MzMwMDMzZGRjZWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiZDlhYzljYjFiODdiY2MwZGRmMDEyYTVhYWI1ZDNlOGQyMGRmNmE4MDAwN2Q3NGIxZTc4ZDZmOTc4ZjViN2EifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L309-L353",
+          "version": "repo-lines-v1:sha256:8141d70ac66faafd9ca8d5070c91a32bed33f9d7205373e5bedc294250bd0c2a:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4YTRiMzI3OWU3ZGUzMzNkMTYxMTVmZTM1ZmMwZDA1ZDY2YzQ1NjhiOTAwNWI3YWE4MzNhYTk4NjVjMDVhMWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA3YjM4OTEyOWQ2ZjMwOTExYWJkOWQ3YjgxYjQ4ZmMxZWY4N2U3MzRjYjRjYjY3MzEzNWQyYzYxYjFmZTlkNTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b73c777f93924c4eba9c299bec5cc914",
+      "statement": "Write preflight checks reject empty or non-Polars frames, invalid modes and unsafe table identifiers; DuckDB write failures are wrapped as `FeatureStoreError`.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L323-L349",
+          "version": "repo-lines-v1:sha256:e1b5156f1dbddef84557fe330c2df2fe5fbb90041f668c53f1e2a77fa5fac13d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2YjUzOTBmYmMwMzI0YWYxYzAyZTkyOGUyZGNjYzMwZjRmMWMxNTM1ODQxMDQwMzUzMWIzOWI1YWJhOTMyMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1NzgwNWMzZmU3YWM2MzA3NGY2OWNkYjI1YjlhY2Q3YTg2NzkyZGZlNTQwODE4YWM0Zjg3NjRiNDllN2QxNGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0ZWEzNTIwZGJhOTlhZGU5MmIwYTU1NzgyZmZiNjRiNTgxZjk2ODY2ZTM1ZTJmNGYyZDZhMjdiNDgyNzI5NTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmYzUyYjI3NjNmZmU4OTkyMjcwZjRhNWMwMWU5YTM2YjlhZDJiY2FhOTk5MGJlOGE3NTY4NjRhMmFiMjQzMTMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L351-L376",
+          "version": "repo-lines-v1:sha256:498d6a3c362f44f9ed39a7e901ff2a1c9f9d5642061f523bf19277dfabf35022:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1OWM3ZTg4MDNlNTM2MDFjM2UyNTBkZTA0NGUxYjFiNDBlYjg5ZTk3NWVlMDNjYjA1MWM5OWJmMDMyODQ2ZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1NjljYjA5MjgwZWUwNzgxOTQ1ZTQ4ZDQwNDFiZDJkZmFhZTY5MWFkMmVhYmY1ZDNjYmEwODQ2YzcyMTZjYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0OWY0Yjk4OTFjYTg5MDE3YTc0N2NiMDNkZTczNzFmZTYzMmU4MGY1MjYwNjAxNTU0NzE5OTQzOGNhZWFlYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiZDlhYzljYjFiODdiY2MwZGRmMDEyYTVhYWI1ZDNlOGQyMGRmNmE4MDAwN2Q3NGIxZTc4ZDZmOTc4ZjViN2EifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a60d93ef7cfd421f976662a6090584ec",
+      "statement": "Table and projected-column identifiers are non-empty, reject SQL statement/comment tokens, are double-quote escaped, and requested columns are checked against table metadata; raw `filter_expr`, `execute()`, and direct connection use are not parameterized identifier interfaces.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L263-L276",
+          "version": "repo-lines-v1:sha256:68cbbb612c37f1c2d1f987e85e29db038b27e0e6a1cfadaea83575bd5e58c64d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlMGJkZjQ4YmM5ZTY2ZWY0MDNmM2YxNjRmNGM2ZDlmZjkzMDlmMjI5MjIzODVlMGYwZDM5ZTU1ODQ1ZGQ0MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0OTQzNzgyMjQ3MGY0ZTI4MTY3YTIwYzU1MmU4OTlmOTYwY2FmMzJhYTk5ZjI5MDQ2MmZhNGI5Mzk0MzRlZmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM3NzdkM2QyZDRlZmZhNGE3MDZmYzlkYzRkYTFjYTY1OTVkYzNlYzQwNjU2MjJjYTllZjY1ZDhhMmZkMzczYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllNzc1YjAzZTQ4YTFjOTI0NzZjMTQwZmI3NTA3OTA3YmRiNjc1YTAyOTg0ZDNiZjdkMDc3NDQ1Yzc3N2E1NjgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L421-L468",
+          "version": "repo-lines-v1:sha256:09673448efa7ec8c1cfc53461f48d1a36487323b708d239cf66f7da94f5960f6:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwZGUyNTg3MTk2MTQ5MjYwNzFjOGZiMTlmZDg2NjE1MDU1NWYxYjAxMzU0ZjhjZDE2MDNhMTA5YTdkZGFlNDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5OTE0NWMyYjg0MTEzZjlkMzY4YjYxMzJjNDQ0NDhjNmIwMzQzYjBkNjYwYjdhYmM1MDQ1ODU4MmI1ZmFhNDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVkODBjMWQzZDU5N2E1NjNhNTcwMWM4OWU4ZDAxYjZkNjZjYjg1NTE0MGMxOTlkMjkwYzIyOTdkNTgwNDczMWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZmOTFhYjQyYmRmYmNhZTA3YTY4ZDQyNDc1ZGFhYzU0OTk4YzZlZDhkMDcxZmY4YjEyYTVkNGVmZWZhZDk5YTMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L45-L62",
+          "version": "repo-lines-v1:sha256:70bb9bdef058eb6db92d9b348509ad9c133d78b7da7648b8ef68ecfecce8985d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MjViZmUwYmE4ZjZiMzYxNGY1MGZjOTAxM2Y1MDExMzg2OTM5ZGYzZWUxMTg4Y2I1ZGFhMjliOGI5NDIxYzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFjNTY2NmY2ZGQ0MDUzZjA0ZGUzNzhiZGVmOGY0MzQ2MjVjZmVhOTUwNDUzZGIyNTIwMzMzYWNhNzNmNWFjZmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlY2IxNGQwNjQ1NWZiYTIyMzY0OTcyMjdkY2NkMmQ2YTc4NjNjNDQ5ZjI2MmQ5MTdjODliOWZhODI4YWNiNjIifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L372-L388",
+          "version": "repo-lines-v1:sha256:49e7737aac8ab883fde4efaaca1cc3412459be82a9b542f41a989f21c2b312fd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4ZDg5YWVhYTc4YTBkZTUzZGE2ZjM3MzY3NDM0ODA4YWNhMjU2Mjc5ODg0YmQ4MzMxNzk0MDIwN2VhYTI2YjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVkZmU3NDkxZjEyMmYzNmRlMTZmNzAxOWZhMDAyOWUyODc5ZWEyOTllMmJhNDAxYzM0MGE3NTVlYThmNmNiOGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYzMzNmMTM3NmU3ZWMyMjExM2U0MGQ4N2FhMzBiNTg2ZWI0MTQzMGU4MWUxNzI5Y2E5ZTM3YTRjNGU5OTYyOGQifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L472-L518",
+          "version": "repo-lines-v1:sha256:783fdcdc4d26963e263f1f8ecf68e64355c8e8f323aad7fd3a46d524edfab94f:eyJzZWxlY3RlZExpbmVDb3VudCI6NDcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ4Zjk2MzhlNTY0OGM2NjZhOGE0YzRjMmY3MmUzOTY5M2U1YWMyNTYxNTI4MzA0OThlMjM0ODBjMTQ4MTY5ZjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAwMDY4YTM0OWNlZWQwMmZmNDY2ZjJkZjg4MzhiNzkxOWQyNjdlYzBhNDhlY2YzZGM0NDQ4ODc1ZjUyMDU3YWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8063a991fce145a89d5b08f1d2829ab8",
+      "statement": "`load_features` validates table existence, optional projections, and a positive limit, executes a DuckDB `SELECT`, and converts the relation to a Polars DataFrame with `.pl()`, preserving tested nulls and empty-result schema.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L383-L475",
+          "version": "repo-lines-v1:sha256:4a0d143345098020f6ac693acf404b17109d633972b637135e7dcaea855a178a:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjODRlY2ZiNDBlZjU5OTgyNTE4NzVmMWE4OGU2NWFhNjA0YmFiNzkwNjA5YjdmN2FhYmYyMzE2OGNmOWYyNjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxMGVlOGM2N2UwNWM2Y2M5OWU2Yzc3OTMwNTc2OTQ1NDgwMGJhYzczMjBmZmJhODU0NWViMjY3N2UxZTk2MTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhYjJkNjc0YjhlMTYzNTcyMDViYmJiMWNkODZjMTI2OGIyYzg2MTk5YTQ4MDU2YzRjMjlkMTYyNzkxNWUxYjcifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L29-L41",
+          "version": "repo-lines-v1:sha256:da1d3dd9d0ff6c7f81aaa2a54dafffee22394b3392436d7ba8ed9139bbc834bf:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZDI2MmRjOGFlYTc0YjkzZjA3MzQ3OWZmODcyYzc2ZTFjZDU5NGQzZWM0MTAzN2YzOWU4ZjFlZmVjYTg5MjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM2Mzg0YmNhNjM4ZjA2ZmYwMjFiYTY4MDU4Yjk3ZTIwYWRiM2NkZWM0ODI2YmM3MjIwZDBmZDdlNzBjOTY5ZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1MTJjYWQ2NDNiNWFmZDRlZDcyZDhjOGNhNGYwZWVmNzZiYjkyNGE4MmNlOGMxYzU0YzJlODQ2ZjdiZDEzNjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6a9c50f24709418b93d66ca677a091f0",
+      "statement": "Before database mutation, the store checks precision-sensitive timestamp round trips; lossy nanosecond replacement or append is rejected, and focused tests verify the existing table remains unchanged after these rejected writes.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L341-L363",
+          "version": "repo-lines-v1:sha256:e2756678536e8bc4f295c2233765c2b15690256b15cf5824fa4a36c6cef1f3e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwOGQwNTEyNWRkNTc2YmI5N2M2NzY1MzlhYWRhYjFmZDY5OTQxY2ZjODBmODJjYzhjODI3Y2JkMzQ2MGNiNGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZiODUwODlmM2NmZTdkOGFlMWZkOTIyZWVhZTQ5MmVmYzA5NzcxZjRkZmMwMTI1YjljMWNkNTc4OGJkNWM5OGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZjZmI0YzMyZjg4ZDMzZTg5YTZiZmQxZTk5YTk5OGY1ODhiNGRmNTNmOGJjYTE2NTMzOTE1NDQwYWIzOWMwMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0MDZiNjQzOTcxYzE2YmYzYWJmZTFjZWU2ZDAyYmRlNTUyYWMzMWMzZWQxNGI4ZDQ1YmE1MTA1MWRjZmU5ZjkifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L159-L174",
+          "version": "repo-lines-v1:sha256:b1915c190f5aea56852df3136d87a1c3f24008d2cc3e752184c3b0a1efd0f899:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NjU0YTczYjIyODlhNjFkNWUzMDc4MTk0YjRkM2UxOWZmMzE3MDIxMmFiMWUyNTIwZWMyMzllNjU4MDkyNzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxMzc1ZThlY2MwZWQyOGFhODE3NjkzMTQ2ZGU0YmZkNGFkM2E2MGU5NDlmZjEyMWQwZmE1YmI3NjNjMGQxY2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkxZjM2ZDM2ZTg5YjBlMWRkMGE3YzA4NDMxNjU4NzYyNDI0ZTJlMDBmZmJhOWNmYmIzN2IxM2EyNDg1ZmE4NGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRmMDU1OTk1YmMyN2ZiZjQ5ZTJlYzhkMTU0MWM4M2I2NmQ4NDZkM2ZiYjA0Yzg5MTc1NjkyZWE2NGU4ZmEyMTgifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L93-L131",
+          "version": "repo-lines-v1:sha256:75c54ef42336ab36fb6e3117cf1080e9671798d5224caeaffc660cceaf208c8d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzYTk1ZWRjY2ZmZDRjMjM3YzQyNjI4YTQzM2QwMDUxYWRkNGUxMTRlOWUwYjQwNTkyN2NlMjc0OWU2ZDFhMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4OGZhNDdlNjJmOTZhM2Y5MzcyMzE1ZDhiZWU5ODA0NzczYzk4Mzk4YjIxMTVhYjZmZTY1YzNjNTNiYzFmOTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ2Njc3MmYzOWE2ZGFhZWI4YzA3NTA4NWUyZTI0NmViMjI0MjNiOTBjNmJjYWExOGZiMDc4YjVhZWY1M2ZjNGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVmNzI5OGI1MGY4NTFiNzZmMmY5NTY4MzBlZmIwYzJkOGRkMzBmODExZTg5NWQ2OTExOGU3YmY1YWQ2N2QzN2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d1e6d2abd75c42e7af100c29bbf15e1f",
+      "statement": "Replacement is not implemented as an explicit atomic swap: after preflight validation an existing table is dropped in one statement and the replacement is created in a subsequent statement, so failures after the drop do not carry a code-level preservation guarantee.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L365-L376",
+          "version": "repo-lines-v1:sha256:c18448d3d3b1e538d2edb0f62b92b4d27f9fa6925589d7420363a6fa12a81e88:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2YTIzNzk0NjQ3NjA3ZTU2MmRkZjAyOWIwMmNhZDVjNDA2YjE3MWU3NmEzZTU5YjFkNjA4Y2ZlNDZhYmIwMGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1NjljYjA5MjgwZWUwNzgxOTQ1ZTQ4ZDQwNDFiZDJkZmFhZTY5MWFkMmVhYmY1ZDNjYmEwODQ2YzcyMTZjYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM3MDZjY2NlYzAxN2Y3ZWFlMGM0ZGMwYTU0YzBjZTgwMDU0YzNmNjkzYzIxZGUyZjY4MjZiODFkM2UyYzJmOGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiZDlhYzljYjFiODdiY2MwZGRmMDEyYTVhYWI1ZDNlOGQyMGRmNmE4MDAwN2Q3NGIxZTc4ZDZmOTc4ZjViN2EifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f49a89eb7e1b47198aacba8701737f32",
+      "statement": "Point-in-time joins load features into Polars, sort labels and features by optional entity keys plus time, and perform a backward as-of join so only the most recent feature at or before each label time is eligible; tolerance can reject overly stale matches.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L477-L539",
+          "version": "repo-lines-v1:sha256:61aaa7994ef9ef120f8d71ada7153981a63c9b338d28d92c6ffb6b1a418b5a0e:eyJzZWxlY3RlZExpbmVDb3VudCI6NjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YThlNDMyOWU0MTAxYjRiNDljNmQyZjg3MzI2Mjc0OTY0NTdiMzY1NTRkNDFkYTI2ZjI1MGVjM2NhOGIwZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA1ZGUxODFmNDI1ZDUyNWUyOWMzZmM1NGFmZDE3OGZmNTU0MDg0ODc2MWVlOGMxNGQ5OGU3NTQzZDVmZDZkOWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3Y2NhZjhhY2U5ZDRiMGYzN2YxNWE5YWZmOWMyMTA5OGQ5ZmVkZjU0NDA3NTE1MDk5MjM4MDdmY2UwN2NmMWQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L595-L626",
+          "version": "repo-lines-v1:sha256:98267f9d6741b482124efa6d9a94ae5d4e56965168f7860c9f8b4abb1d2bb9b5:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViYTNkMTMzYmQ2MDdjYWNmMzhkOGFhNWUzZTJmYTI2YTY1M2Q4MmJjMjA3OTcxZTkyOTkwZWJmZTk0YTUzMWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzZGY0YmFkN2M3MGU5NjQ5Y2RmMTdlY2E4YTYzY2M1MDc5YWE5MWNmNDMwMDU2ODJlYjQ5YjhhY2U0NjUxNDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg3NDY2ODZjMTMwZmUzYzEwNmM5NDNlOTA5NDk0NDEzNWY2ZWUwZTlhYTZmMTE3MzQxOGIxMGQzMGM0NjM1OGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0OTA5ZWNmODYzOTM1ZDdmZmVmMWY3ZWU0N2EzNmZmYmM2N2YyMjk3MmRhOTIyYTU1NzU4MDQwMDIwZmEzOTQifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L615-L675",
+          "version": "repo-lines-v1:sha256:7bba205df3a30f42c4fef70b1e45cc15d1e3f170b147723a142fa058a1591459:eyJzZWxlY3RlZExpbmVDb3VudCI6NjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzMDE2N2YyYTNkOGQ2MjM0NzgxYjA4ZDc0ODJkMmM0YzU4NjVlYWRhYmM1NjY1ZmY4Yzc2NzNlNWQzNjUyMjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxOTg1N2ExN2FhMjAzZTc3OGRkOGM3MWRkYzRiNzAzNjY2ZDA1ODcwNjA2ZDlhMmFiNTcyNTY0NjlmNjI2NDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZlY2U1NDM2NWEyOGY4NzU5ZDI4ZjQ4MGY1ZDViOGQwMDBjZjUzZGRkYzdlMzgwODhkYTg2MzdmNzZiYTM4OWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAzYWM3NGQxNmQ5NDkwZDUwZDI5MjA2NGM3ZjVhOTk0YTMyMzRlOWU1MzcwNjhmZjc4N2I5ZjI5ZTM2ZGVlMzAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5665fe795dca4d25b3688da12d7756d8",
+      "statement": "For aware timestamp keys, point-in-time joining converts DuckDB-returned feature timestamps to the labels' timezone; differing datetime units are promoted to the finer unit with overflow checks, and the returned label timestamp is restored to its original dtype.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L549-L594",
+          "version": "repo-lines-v1:sha256:df1a6ec7913c07bbb46c50b9ba1e98702848d72032dca725d5496899c409fe39:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmMDg5OTc1MzkxMDUwZDgzZmY0NTQ2NTQyMDBjZjNjNTFjNmQyZDE1ZGVjZGZmMzU3NTZjNjY0NWU1ZDMwZDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlYmRjZjE3NzQ0NjYwZmU4OTgwZjg4NGYxMTVkOGEwMTM0YzQzNzkxOTM3NzBmMTI5ODAyMzBhZWZiOGIzODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEyYWQwY2JiZTBiNWE4ODEyODQ5M2QzMTdlMjZlZTdhMzcxYWYyMTNiN2ZjZmFhMTc5NWY3NTg4NzM2MWEwODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkNTMyNzE3Y2U0NzExZjU1ZDMzMmUzNDUxYTkyMTEwOGNkYzg2YWNjMThiYjc5YzNlYjYxM2FmOTIzNGQwNDgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L627-L638",
+          "version": "repo-lines-v1:sha256:6b5d5a6eac980851213ea3a6e6add0c05c44a0ac230da9dec7382f8d1034841c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkYmU0MzdlMmJiNzg0NTY0MjQyODU4OTM1MmUyODU2NzRkYThmMzNmYzY4NjJiZWJiZWM1YTM5NzZmNmI3ZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyNmNmYjQzY2Y3YzIzNzVkNWQ3NjhlZDQ5Mjg4M2NhNzI1MGI2Yzg0OGRiNTU1OTY2MmUwOTU0YWRmOGM1ZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiMDBiYWUwYmI1MjlkOTkzNTgzZWU0Mzk0ZjNlZTA2ZTRlMGY0MjA0OTJjYzViZmQ3M2JmNTUwNzQzMTI1OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdlN2ZhYWE4MWE0NzY2ZDMyODc5YzU1ZDExZWE5Y2QwZDcyZGEwMTQzYTMyMTIxMzdkZGE5OWI5MDEyNWZjZTMifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L133-L158",
+          "version": "repo-lines-v1:sha256:b536341c877ad9949909a4b464bc3dd34d7dc76bf7545fa44a40b0c112e8a2b0:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NjU0YTczYjIyODlhNjFkNWUzMDc4MTk0YjRkM2UxOWZmMzE3MDIxMmFiMWUyNTIwZWMyMzllNjU4MDkyNzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhYjk1YzI1NTNmYzg5ZGIzMTIwYjkyMGQwOWI4MzAzMTcwZTdkYmE2NjYwZTZkMzlmMGU0YmE4N2UzNmEzNjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNkZjYwMzY5ODAxODI3NzZjMjAzM2E0Y2I4NjIwYzRmYmM4YzQzMWNjNGNiNjY2Y2VhYjI2NzZjMDc5ODZkN2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFlNTEzNmVkZmExZTg5N2U4OGQyOTBhNTgyM2FlYmU0OGY0MDRkMjRhNzZlOGM2ZWEwNzFiMTE0MjQ5ODNhOGYifQ"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L43-L92",
+          "version": "repo-lines-v1:sha256:974d38dc62b8e23337d12c02d540433d3750975d44716dd9385e4a3758094f11:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmMDYzNjNhOTZiMjU4MjcyYjA5OTE2NmFiY2Q1ZTllZWI0YzRiMmM1ZTU5MGRkNWY5NWQwZTQyYTNmNjhhNDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxNmIwMjUyNmYyMjdhN2RhOWVkNzRlYzE3NmY5MzQxYWQxNTcwMjY1ZGVhZjliZTdiZDMxYzUxNDgxODI5YzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZhZGIzYmIyMjBiY2E1ZjM4OTkyODI4OGM4ZmE3OWU3NjVlZWNlNmNhNjZmM2IwZGE2MGIxM2E0ZTUwNmJiMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmZjBhZDhjZTI4ZGFhYWNmYWY3ZTMwYmQ2NzQyNDBkYzM0OWJkODRkZmU0NWZiNDMyZTY4ZDk4NGRmNDZjZTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1fbbbfa5c0854e0189dd6b506eb5b01b",
+      "statement": "Point-in-time joins validate non-empty Polars labels, the label timestamp, feature-table existence, and label-side grouping keys, while failures during loading, conversion, sorting, or joining are wrapped as `FeatureStoreError`.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/engineer/store/offline.py#L540-L644",
+          "version": "repo-lines-v1:sha256:4b998e767b1a971203b99fee405b21f9fe72f2553de2752266815490c1b8aa8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyOTE2MWViNGE0OWM1OWUxOWVmMjQ5MmI3OWU4MTBmZWE4YzliNzJlOGNiZGNkODg3NDZhM2ViZDFlOGIxYjQwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5YWE2Mjk2YmZjZDAyZjBlOTgyYjllMDg0NzM1MzNlZGQ3Mzg3MzMxMDU1ZWFiMGI5MmRkMTZhNGZiN2MwN2I1IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIwMTIzNjM2ODNiY2Y0NjBiYjg4ZDc5MzRhZWIwNGNjMzhiYTA4OTM2MDkxM2M4ZjljYzk0MDg2YWI5N2QxNWY2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlZmMwYTJmYjgyYWI2NTQ2M2Q3MzVlNjRhNWFhYTFmODM4MjNhZmY4OWIxMDRmNzM0YzM1ZjkyNGI0YTlmNTcxIn0"
+        },
+        {
+          "resource": "repo://tests/store/test_offline.py#L676-L723",
+          "version": "repo-lines-v1:sha256:268e44b891c2530493e1a3a60284ebfbfd34a42d5f997ee9bc6885fb1ea3a100:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhNDVlODBjYjhlMTIyNzk0NThlZTNjNWRmZjU4YWYzYmU2OGIxYzY5YjE0Mzk3YzA1NmVlMzA5NzFlYzM4YjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRiN2ZkNTYyNDMwOTYxNGJiYTVlODk1MWM1MzcwNTE5NmZjMDAxN2Y5OTQwN2M4NWMxODQ4Y2U1MzIyMGY2ZDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVkNjk5YTEzYWI1NDBlNzg1Yzk1ODc5OTY1MDdhZWY1OTJlOWRlYmNjMWI3MzY4YTk5YjZlOTY2NGYwZjllYjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkN2MzN2MzMGQzNjUzZTJjNmQwNjVmNzUwZDdhMmFjMDMwMWRhOTQxYWM0NjVmMTNlNmVlOWM5MzQ4YmE5ZTYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:41.957Z"
+  }
+}
